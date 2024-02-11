@@ -1,0 +1,139 @@
+.swiper-button-prev,
+.swiper-button-next {
+	&:active,
+	&:focus {
+		outline: none !important;
+	}
+	&::-moz-focus-inner {
+		border: 0 !important;
+	}
+
+	&::after {
+		font-size: 0px;
+	}
+}
+
+.swiper-pagination-bullet {
+	&:active,
+	&:focus {
+		outline: none !important;
+	}
+	&::-moz-focus-inner {
+		border: 0 !important;
+	}
+}
+
+.swiper-button-lock {
+	display: none !important;
+}
+
+.swiper-pagination-lock {
+	display: none !important;
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+}
+
+// nav
+.swiper-button-next,
+.swiper-button-prev {
+	position: relative;
+	overflow: hidden;
+	top: 0%;
+	margin-top: 0;
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border-radius: 0%;
+	transition: all 0.3s ease 0s;
+	padding: 12px 20px;
+	width: 100%;
+	height: auto;
+	background-color: var(--second4-color);
+	max-width: 102px;
+
+	@media (max-width: 1629.98px) {
+		max-width: 85px;
+		padding: 10px 16px;
+	}
+
+	@media (max-width: 1169.98px) {
+		max-width: 70px;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--second2-color);
+		}
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+	left: 0px;
+	right: 0px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+	right: 0px;
+	left: 0px;
+}
+
+.swiper-navigation {
+	display: flex;
+	align-items: center;
+}
+
+// Фракция
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 0px;
+	left: 0;
+	color: rgba(211, 178, 152, 0.5);
+	font-family: "Cormorant Garamond";
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%; /* 31.2px */
+	letter-spacing: 2.6px;
+	text-transform: uppercase;
+
+	@media (max-width: 1439.98px) {
+		font-size: 20px;
+	}
+
+	@media (max-width: 991.98px) {
+		font-size: 18px;
+		line-height: 120%; /* 21.6px */
+		letter-spacing: 1.8px;
+	}
+}
+
+.swiper-pagination {
+	position: relative;
+	text-align: left;
+	transition: 0.3s opacity;
+	transform: translate3d(0, 0, 0);
+	z-index: 10;
+
+	@media (max-width: 767.98px) {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+}
+
+.swiper-pagination .swiper-pagination-current {
+	width: 30px;
+	display: inline-block;
+}
