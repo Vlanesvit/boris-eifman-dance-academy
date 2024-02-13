@@ -330,6 +330,6 @@ function search() {
 	}
 	// Функции вызова курсора
 	addCursorHover(".rs-search__overlay", ".cursor", "cursor__active");
-	addCursorMove(".cursor__circle")
+	addCursorMove(".rs-search__overlay", ".cursor__circle")
 }
 search()

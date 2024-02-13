@@ -24,8 +24,8 @@
 		align-items: center;
 		flex-wrap: wrap;
 
-		@media (max-width: 1169.98px){
-			  justify-content: center;
+		@media (max-width: 1169.98px) {
+			justify-content: center;
 		}
 	}
 
@@ -68,7 +68,7 @@
 			width: 4px;
 			height: 4px;
 			border-radius: 50%;
-			background-color: var(--primary-color);
+			background-color: #0c75af;
 			transition: all 0.3s ease 0s;
 			margin: 0px 10px 2.5px;
 		}

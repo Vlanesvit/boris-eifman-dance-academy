@@ -27,9 +27,11 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 100%;
-		background-color: var(--second-color);
+		background-color: #0c75af;
 		opacity: 1;
-		transition: opacity 0.3s ease-in-out, height 0.4s cubic-bezier(0.339, -0.18, 0.228, 1.656),
+		transition:
+			opacity 0.3s ease-in-out,
+			height 0.4s cubic-bezier(0.339, -0.18, 0.228, 1.656),
 			width 0.4s cubic-bezier(0.339, -0.18, 0.228, 1.656);
 	}
 

@@ -98,33 +98,46 @@ function init() {
 /* ====================================
 Кастомный курсор
 ==================================== */
-function addCursorHover(hoveredElement, selectedElement, newClass) {
-	document.querySelectorAll(hoveredElement).forEach(hover => {
-		hover.addEventListener('mouseover', function () {
-			document.querySelector(selectedElement).classList.add(newClass)
-		})
-		hover.addEventListener('mouseout', function () {
+const addCursorHover = (hoveredElement, selectedElement, newClass) => {
+	if (document.querySelector(hoveredElement) && document.querySelector(selectedElement)) {
+		document.querySelectorAll(hoveredElement).forEach(hover => {
+			hover.addEventListener('mouseenter', function () {
+				document.querySelector(selectedElement).classList.add(newClass)
+				hover.classList.add('_mouse-event')
+			})
+
+			hover.addEventListener('mouseleave', function () {
+				document.querySelector(selectedElement).classList.remove(newClass)
+				hover.classList.remove('_mouse-event')
+			})
+
+			hover.addEventListener('mousemove', function () {
+				document.querySelector(selectedElement).classList.add(newClass)
+			})
+		});
+	}
+}
+const addCursorDrag = (hoveredElement, selectedElement, newClass) => {
+	if (document.querySelector(hoveredElement) && document.querySelector(selectedElement)) {
+		document.querySelectorAll(hoveredElement).forEach(hover => {
+			hover.addEventListener('mousedown', function () {
+				document.querySelector(selectedElement).classList.add(newClass)
+			})
+		});
+		document.body.addEventListener('mouseup', function () {
 			document.querySelector(selectedElement).classList.remove(newClass)
 		})
-	});
+	}
 }
-function addCursorDrag(hoveredElement, selectedElement, newClass) {
-	document.querySelectorAll(hoveredElement).forEach(hover => {
-		hover.addEventListener('mousedown', function () {
-			document.querySelector(selectedElement).classList.add(newClass)
-		})
-	});
-	document.body.addEventListener('mouseup', function () {
-		document.querySelector(selectedElement).classList.remove(newClass)
-	})
-}
-function addCursorMove(selectedElement) {
+const addCursorMove = (hoveredElement, selectedElement) => {
 	document.body.addEventListener('mousemove', function (e) {
-		setTimeout(() => {
-			document.querySelector(selectedElement).style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-		}, 0);
+		if (document.querySelector(hoveredElement) && document.querySelector(selectedElement)) {
+			document.querySelector(selectedElement).style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
+		}
 	});
 }
+addCursorHover(".rs-category__item", ".rs-category .cursor", "cursor__active");
+addCursorMove(".rs-category__item", ".rs-category .cursor__circle")
 
 /* ====================================
 Спойлеры/аккордионы

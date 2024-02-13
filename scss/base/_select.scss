@@ -6,11 +6,11 @@
 
 	&._select-error {
 		.select__title {
-			border-color: var(--primary-color);
+			border-color: #0c75af;
 		}
 
 		.select__value {
-			color: var(--primary-color);
+			color: #0c75af;
 
 			&::before {
 				display: block;
@@ -39,7 +39,7 @@
 		display: flex;
 		align-items: center;
 		padding: 15px 20px;
-		color: var(--primary-color);
+		color: #0c75af;
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 400;
@@ -153,12 +153,12 @@
 		}
 
 		&._select-selected {
-			color: var(--primary-color);
+			color: #0c75af;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--primary-color);
+				color: #0c75af;
 			}
 		}
 	}

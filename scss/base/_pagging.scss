@@ -28,7 +28,7 @@
 		border-radius: 5px;
 		border: 1.191px solid #d2e3f0;
 		background-color: #fff;
-		color: var(--primary-color);
+		color: #0c75af;
 
 		@media (max-width: 439.98px) {
 			min-width: 30px;
@@ -83,7 +83,7 @@
 
 			&.pagging__arrow_start,
 			&.pagging__arrow_end {
-				color: var(--second-color);
+				color: #0c75af;
 				text-decoration-line: underline;
 			}
 
@@ -94,7 +94,7 @@
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: var(--primary-color);
+					color: #0c75af;
 					background-color: #fff;
 				}
 			}
@@ -102,8 +102,8 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: var(--primary-color);
-				border-color: var(--primary-color);
+				background-color: #0c75af;
+				border-color: #0c75af;
 
 				svg {
 					path {
@@ -162,15 +162,15 @@
 	&__link {
 		&._active {
 			color: #fff;
-			background-color: var(--primary-color);
-			border-color: var(--primary-color);
+			background-color: #0c75af;
+			border-color: #0c75af;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
 				color: #fff;
-				background-color: var(--primary-color);
-				border-color: var(--primary-color);
+				background-color: #0c75af;
+				border-color: #0c75af;
 			}
 		}
 	}

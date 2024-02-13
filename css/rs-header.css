@@ -216,7 +216,6 @@ header {
   color: rgba(0, 0, 0, 0.3);
 }
 .rs-header__language .menu__list li a {
-  font-family: "Tilda Sans";
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
@@ -367,7 +366,6 @@ header {
 .rs-header__bvi-link span {
   color: #fff;
   margin-left: 8px;
-  font-family: "Tilda Sans";
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -641,7 +639,6 @@ header {
   }
 }
 .menu__top .menu__body .menu__list > li > a {
-  font-family: "Tilda Sans";
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
@@ -720,7 +717,6 @@ header {
   }
 }
 .menu__bottom .menu__body .menu__list > li > a {
-  font-family: "Tilda Sans";
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
@@ -780,10 +776,14 @@ header {
 }
 .menu__body .menu__list li {
   position: relative;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: -10px;
-  margin-bottom: -10px;
+}
+@media (min-width: 991.98px) {
+  .menu__body .menu__list li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
 }
 @media (any-hover: hover) {
   .menu__body .menu__list li:hover > a {
@@ -946,7 +946,6 @@ header {
 .menu__body .menu__list .menu__dropdown-list li a {
   position: relative;
   color: rgb(0, 0, 0);
-  font-family: "Tilda Sans";
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -1229,7 +1228,7 @@ header {
 }
 .rs-search__input {
   width: 100%;
-  color: var(--font-color);
+  color: #000;
   font-size: 18px;
   font-style: normal;
   font-weight: 250;
@@ -1302,7 +1301,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: var(--primary-color);
+  color: #0c75af;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }

@@ -3,15 +3,8 @@
 	margin: 0px;
 	border: 0px;
 	box-sizing: border-box;
-	scrollbar-color: var(--primary-color) var(--bg-color);
+	scrollbar-color: $accentColor $bgColor;
 	scrollbar-width: thin;
-
-	// outline: 1px solid red !important;
-
-	// &::selection {
-	// 	background: var(--primary-color);
-	// 	color: var(--primary-color);
-	// }
 
 	&::-webkit-scrollbar {
 		cursor: pointer;
@@ -22,7 +15,7 @@
 
 	&::-webkit-scrollbar-thumb {
 		cursor: pointer;
-		background: var(--primary-color);
+		background: #0c75af;
 		transition: 0.2s ease-in-out;
 		border-radius: 3px;
 	}
@@ -32,18 +25,13 @@
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
-		scrollbar-color: var(--primary-color) var(--primary-color);
+		scrollbar-color: $accentColor #0c75af;
 		scrollbar-width: thin;
-
-		// &::selection {
-		// 	background: var(--primary-color);
-		// 	color: var(--primary-color);
-		// }
 
 		&::-webkit-scrollbar {
 			cursor: pointer;
 			width: 6px;
-			background: var(--bg-color);
+			background: $bgColor;
 			border-radius: 3px;
 		}
 
@@ -73,11 +61,11 @@ body {
 }
 
 body {
-	color: var(--font-color);
+	color: $fontColor;
 	line-height: 1;
 	font-family: $fontFamily;
 	font-size: $fontSize;
-	background: var(--bg-color);
+	background: $bgColor;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
