@@ -1,47 +1,4 @@
 /* ====================================
-Анимация кнопок
-==================================== */
-function animBtn() {
-	const rsBtns = document.querySelectorAll('.rs-btn');
-	if (rsBtns.length > 0) {
-		rsBtns.forEach((rsBtn) => {
-			// Делаем обертку для анимации 
-			rsBtn.querySelectorAll('span').forEach(btnSpan => {
-				rsBtn.innerHTML =
-					'<span class="_btn-text">' + btnSpan.textContent + '</span>'
-			});
-		});
-	}
-
-	const rippleBtn = document.querySelectorAll('._btn-ripple');
-	if (rippleBtn.length > 0) {
-		rippleBtn.forEach((btn) => {
-			const ripple = document.createElement("span");
-			ripple.classList.add('_btn-point')
-			btn.appendChild(ripple);
-			btn.addEventListener("mouseenter", (e) => {
-				let targetCoords = e.currentTarget.getBoundingClientRect();
-				let yCoord = e.clientY - targetCoords.top;
-				let xCoord = e.clientX - targetCoords.left;
-				ripple.style.top = `${yCoord}px`;
-				ripple.style.left = `${xCoord}px`;
-				ripple.classList.add('active');
-			});
-
-			btn.addEventListener('mouseleave', function (e) {
-				let targetCoords = e.currentTarget.getBoundingClientRect();
-				let yCoord = e.clientY - targetCoords.top;
-				let xCoord = e.clientX - targetCoords.left;
-				ripple.style.top = `${yCoord}px`;
-				ripple.style.left = `${xCoord}px`;
-				ripple.classList.remove('active');
-			})
-		});
-	}
-}
-animBtn()
-
-/* ====================================
 Проверка поддержки webp, добавление класса webp или no-webp для HTML
 ==================================== */
 function isWebp() {
@@ -137,7 +94,6 @@ function init() {
 		map.events.add('click', e => e.get('target').balloon.close());
 	}
 }
-
 
 /* ====================================
 Кастомный курсор
