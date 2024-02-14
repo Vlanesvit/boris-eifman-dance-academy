@@ -1,0 +1,280 @@
+.rs-footer {
+	margin-top: 40px;
+	background: #20487b;
+	color: #fff;
+	height: 881px;
+
+	// .rs-footer__container
+	&__container {
+		max-width: 1920px;
+		padding-left: 0px;
+		padding-right: 0px;
+		height: 100%;
+	}
+
+	// .rs-footer__wrapper
+	&__wrapper {
+		display: flex;
+		height: 100%;
+
+		& > .rs-footer__img {
+			@media (min-width: 991.98px) {
+				display: none;
+			}
+		}
+	}
+
+	// .rs-footer__block
+	&__block {
+		max-width: 495px;
+		width: 100%;
+		height: 100%;
+		padding: 114px 77px;
+		border-right: 1px solid #dbdbdb;
+		background: linear-gradient(180deg, #20487b 52.81%, rgba(32, 72, 123, 0) 100%);
+		position: relative;
+	}
+
+	// .rs-footer__logo
+	&__logo {
+		max-width: 340px;
+		width: 100%;
+		position: relative;
+		z-index: 1;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .rs-footer__img
+	&__img {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// .rs-footer__info
+	&__info {
+		width: 100%;
+	}
+
+	// .rs-footer__grid
+	&__grid {
+		width: 100%;
+		padding: 114px 72px 85px 173px;
+		border-bottom: 1px solid #dbdbdb;
+
+		&_body {
+			width: 100%;
+			position: relative;
+		}
+	}
+
+	// .rs-footer__menu
+	&__menu {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 84px 160px;
+		max-width: 740px;
+
+		// .rs-footer__menu_item
+		&_item {
+			& > ul {
+				margin-top: 42px;
+				li {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: normal;
+					color: rgba(255, 255, 255, 0.8);
+
+					&:not(:last-child) {
+						margin-bottom: 21px;
+					}
+
+					a {
+					}
+				}
+			}
+
+			& > .rs-btn {
+				padding-left: 43px;
+				padding-right: 43px;
+				margin-top: 30px;
+			}
+
+			.rs-footer__menu_social {
+				margin-top: 36px;
+
+				ul {
+					display: flex;
+					align-items: center;
+
+					li {
+						margin: 0;
+
+						&:not(:last-child) {
+							margin: 0px 20px 0px 0px;
+							margin-right: 20px;
+
+							@media (max-width: 1699.98px) {
+								margin: 0px 15px 0px 0px;
+							}
+
+							@media (max-width: 991.98px) {
+								margin: 0px 15px 0px 0px;
+							}
+						}
+
+						a {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 48px;
+							height: 48px;
+							border-radius: 50%;
+							border: 1px solid #fff;
+
+							svg {
+								width: 27px;
+								height: 27px;
+
+								path {
+									transition: fill 0.3s ease 0s;
+									fill: #fff;
+								}
+
+								@media (max-width: 1699.98px) {
+									width: 25px;
+									height: 25px;
+								}
+
+								@media (max-width: 1439.98px) {
+									width: 20px;
+									height: 20px;
+								}
+							}
+						}
+
+						&.vk-icon {
+							@media (any-hover: hover) {
+								&:hover {
+									a {
+										svg {
+											path {
+												fill: rgb(0, 119, 255);
+											}
+										}
+									}
+								}
+							}
+						}
+						&.dzen-icon {
+							@media (any-hover: hover) {
+								&:hover {
+									a {
+										svg {
+											path {
+												fill: rgb(34, 35, 48);
+											}
+										}
+									}
+								}
+							}
+						}
+						&.youtube-icon {
+							@media (any-hover: hover) {
+								&:hover {
+									a {
+										svg {
+											path {
+												fill: rgb(205, 32, 31);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&:nth-child(1) {
+				& > ul {
+					margin: 0;
+					li {
+						&:not(:last-child) {
+							margin-bottom: 43px;
+						}
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				padding-top: 10px;
+
+				& > ul {
+					margin: 0;
+				}
+			}
+
+			&:nth-child(3) {
+				padding-top: 6px;
+
+				& > ul {
+					li {
+						line-height: 160%;
+						letter-spacing: 0.03em;
+						color: #fff;
+					}
+				}
+			}
+
+			&:nth-child(4) {
+				& > ul {
+					margin-top: 38px;
+
+					li {
+						letter-spacing: 0.03em;
+
+						&:first-child {
+							font-size: 25px;
+							color: #fff;
+						}
+
+						&:not(:last-child) {
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.scroll-up {
+		writing-mode: vertical-rl;
+		white-space: nowrap;
+		transform: rotate(180deg);
+		padding: 20px 17px;
+		position: absolute;
+		bottom: 7px;
+		right: 0;
+	}
+
+	// .rs-footer__bottom
+	&__bottom {
+		width: 100%;
+		padding: 60px 72px 60px 173px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-weight: 400;
+		font-size: 14px;
+		color: rgba(255, 255, 255, 0.5);
+	}
+}
