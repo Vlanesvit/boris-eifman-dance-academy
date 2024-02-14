@@ -65,26 +65,38 @@ function initSliders() {
 				// Шрина экрана
 				breakpoints: {
 					320: {
-						slidesPerView: 1,
-						spaceBetween: 20,
+						slidesPerView: 1.5,
+						spaceBetween: 0,
+						grid: {
+							fill: 'row',
+							rows: 1,
+						},
 					},
 					539.98: {
 						slidesPerView: 2,
-						spaceBetween: 20,
+						spaceBetween: 0,
+						grid: {
+							fill: 'row',
+							rows: 1,
+						},
 					},
 					767.98: {
-						slidesPerView: 2,
-						spaceBetween: 24,
+						slidesPerView: 3,
+						spaceBetween: 0,
+						grid: {
+							fill: 'row',
+							rows: 1,
+						},
 					},
 					991.98: {
 						slidesPerView: 2,
-						spaceBetween: 30,
+						spaceBetween: 0,
+						grid: {
+							fill: 'row',
+							rows: 2,
+						},
 					},
 					1169.98: {
-						slidesPerView: 3,
-						spaceBetween: 30,
-					},
-					1439.98: {
 						slidesPerView: 3,
 						spaceBetween: 0,
 						grid: {
@@ -157,26 +169,22 @@ function initSliders() {
 				// Шрина экрана
 				breakpoints: {
 					320: {
-						slidesPerView: 1,
-						spaceBetween: 20,
+						slidesPerView: 2.1,
+						spaceBetween: 10,
 					},
 					539.98: {
 						slidesPerView: 2,
-						spaceBetween: 20,
+						spaceBetween: 15,
 					},
 					767.98: {
-						slidesPerView: 2,
-						spaceBetween: 24,
+						slidesPerView: 3,
+						spaceBetween: 15,
 					},
 					991.98: {
-						slidesPerView: 2,
-						spaceBetween: 30,
+						slidesPerView: 4,
+						spaceBetween: 20,
 					},
 					1169.98: {
-						slidesPerView: 3,
-						spaceBetween: 30,
-					},
-					1439.98: {
 						slidesPerView: 5,
 						spaceBetween: 20,
 					},
@@ -246,25 +254,21 @@ function initSliders() {
 				breakpoints: {
 					320: {
 						slidesPerView: 1,
-						spaceBetween: 20,
+						spaceBetween: 10,
 					},
 					539.98: {
 						slidesPerView: 2,
-						spaceBetween: 20,
+						spaceBetween: 15,
 					},
 					767.98: {
-						slidesPerView: 2,
-						spaceBetween: 24,
+						slidesPerView: 3,
+						spaceBetween: 15,
 					},
 					991.98: {
-						slidesPerView: 2,
-						spaceBetween: 30,
+						slidesPerView: 3,
+						spaceBetween: 20,
 					},
 					1169.98: {
-						slidesPerView: 3,
-						spaceBetween: 30,
-					},
-					1439.98: {
 						slidesPerView: 4,
 						spaceBetween: 28,
 					},

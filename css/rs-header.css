@@ -88,6 +88,11 @@ header {
     max-width: 200px;
   }
 }
+@media (max-width: 1169.98px) {
+  .rs-header__logo {
+    max-width: 160px;
+  }
+}
 @media (max-width: 991.98px) {
   .rs-header__logo {
     max-width: 160px;
@@ -705,6 +710,11 @@ header {
     margin-right: 20px;
   }
 }
+@media (max-width: 1169.98px) {
+  .menu__bottom .menu__body .menu__list > li:not(:last-child) {
+    margin-right: 15px;
+  }
+}
 @media (max-width: 991.98px) {
   .menu__bottom .menu__body .menu__list > li:not(:last-child) {
     margin-right: 15px;
@@ -728,7 +738,7 @@ header {
     font-size: 12px;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 1169.98px) {
   .menu__bottom .menu__body .menu__list > li > a {
     font-size: 11px;
   }

@@ -5,11 +5,15 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=, initial-scale=1.0" />
+
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=38863ba5-9462-46dc-940c-d9fed985abff&lang=ru_RU"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 	<link rel="stylesheet" href="css/rs-style.css" />
+
 	<title>Главная - Академия танца Бориса Эйфмана</title>
 </head>
 
@@ -318,30 +322,33 @@
 
 			<link rel="stylesheet" href="css/rs-banner.css">
 			<section class="rs-banner">
-				<div class="rs-banner__bg">
-					<video playsinline autoplay loop muted poster="./img/blocks/banner/banner_poster-1.jpg">
+				<div class="rs-banner__bg" data-aos="fade" data-aos-delay="0">
+					<video playsinline autoplay loop muted poster="./img/blocks/banner/banner_poster-1.jpg"
+						class="js-bgvideo">
 						<source src="./img/blocks/banner/banner_video-1.mp4" type="video/mp4">
 					</video>
 					<!-- <img src="./img/blocks/banner/banner_poster-1.jpg" alt=""> -->
 				</div>
-				<div class="rs-banner__content">
+				<div class="rs-banner__content" data-aos="fade-up" data-aos-delay="100">
 					<div class="rs-banner__container">
 						<div class="rs-banner__wrapper">
 							<a href="#" class="rs-banner__scroll-down">Прокрутите вниз</a>
 							<div class="rs-banner__body">
 								<h1>Академия танца Бориса Эйфмана</h1>
-								<h6>Санкт-Петербургское государственное бюджетное профессиональное образовательное
+								<h6>Санкт-Петербургское государственное
+									бюджетное профессиональное образовательное
 									учреждение</h6>
 							</div>
-							<button type="button" class="rs-banner__video-control _stop-btn">
-								<svg class="stop-video-btn" width="14" height="16" viewBox="0 0 14 16" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
+							<button type="button" class="rs-banner__video-control bgvideo__control"
+								id="bgvideoPlaypause">
+								<svg class="video-icon--pause is-active" width="14" height="16" viewBox="0 0 14 16"
+									fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect x="0.649414" y="0.649414" width="4.48046" height="14.0713" rx="0.870115"
 										stroke="black" />
 									<rect x="8.87012" y="0.649414" width="4.48046" height="14.0713" rx="0.870115"
 										stroke="black" />
 								</svg>
-								<svg class="play-video-btn" width="16" height="18" viewBox="0 0 16 18" fill="none"
+								<svg class="video-icon--play" width="16" height="18" viewBox="0 0 16 18" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M12.438 6.56162C13.8549 7.41973 14.5633 7.84879 14.8062 8.39812C15.0184 8.87788 15.0184 9.42095 14.8062 9.90071C14.5633 10.45 13.8549 10.8791 12.438 11.7372L5.78341 15.7677C4.21089 16.7201 3.42463 17.1963 2.77579 17.1458C2.21021 17.1017 1.69177 16.8233 1.35345 16.3818C0.965332 15.8754 0.965332 14.9769 0.965332 13.1799V5.11893C0.965332 3.32191 0.965332 2.4234 1.35345 1.91699C1.69177 1.47557 2.21021 1.19712 2.77579 1.15306C3.42463 1.10251 4.21089 1.57872 5.78341 2.53114L12.438 6.56162Z"
@@ -357,22 +364,25 @@
 			<section class="rs-quote">
 				<div class="rs-quote__container">
 					<div class="rs-quote__wrapper">
-						<div class="rs-quote__img">
+						<div class="rs-quote__img" data-reveal-anim data-reveal-anim-left data-aos>
 							<img src="./img/blocks/quote/director.jpg" alt="">
 						</div>
 						<div class="rs-quote__desc">
 							<div class="rs-quote__body">
-								<h2>«Воспитать новую творческую элиту России – высокая миссия Академии танца»</h2>
-								<h5>Я рад приветствовать Вас на официальном сайте Академии
+								<h2 data-aos="fade-up" data-aos-delay="100">«Воспитать новую творческую элиту России –
+									высокая миссия Академии танца»</h2>
+								<h5 data-aos="fade-up" data-aos-delay="150">Я рад приветствовать Вас на официальном
+									сайте Академии
 									танца – уникального образовательного учреждения, призванного подготовить
 									универсальных балетных танцовщиков. Талантливые воспитанники Академии будут
 									находиться на содержании государства и спонсоров, а также получат все необходимые
 									условия для интеллектуального и духовного развития.</h5>
-								<h5>В своей работе мы стремимся к тому, чтобы наши ученики стали не только безупречными
+								<h5 data-aos="fade-up" data-aos-delay="200">В своей работе мы стремимся к тому, чтобы
+									наши ученики стали не только безупречными
 									профессионалами, настоящими Артистами, но и глубокими и достойными людьми, не
 									мыслящими свою жизнь без сцены.</h5>
 
-								<div class="rs-quote__signature">
+								<div class="rs-quote__signature" data-aos="fade-left" data-aos-delay="300">
 									<img src="./img/blocks/quote/signature.jpg" alt="">
 								</div>
 							</div>
@@ -388,15 +398,15 @@
 					<div class="rs-news__wrapper">
 						<div class="rs-news__list">
 							<div class="rs-news__head">
-								<h2>Новости академии</h2>
+								<h2 data-aos="fade-up" data-aos-delay="100">Новости академии</h2>
 							</div>
-							<div class="rs-news__block">
+							<div class="rs-news__block" data-aos="fade-right" data-aos-delay="100">
 								<a href="./news-page-photo.html">
 									<div class="rs-news__item">
-										<div class="rs-news__img">
+										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
 											<img src="./img/blocks/news/news_1.jpg" alt="">
 										</div>
-										<div class="rs-news__desc">
+										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
 											<div class="rs-news__desc_list">
 												<ul>
 													<li>Академия</li>
@@ -412,8 +422,8 @@
 												Санкт-Петербурга.</p>
 										</div>
 									</div>
-									<div class="rs-news__footer">
-										<div class="rs-news__arrow">
+									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+										<div class="rs-news__arrow rs-btn-arrow">
 											<svg viewBox="0 0 20 12" fill="none">
 												<path
 													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
@@ -427,10 +437,10 @@
 							<div class="rs-news__block">
 								<a href="./news-page-photo.html">
 									<div class="rs-news__item">
-										<div class="rs-news__img">
+										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
 											<img src="./img/blocks/news/news_2.jpg" alt="">
 										</div>
-										<div class="rs-news__desc">
+										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
 											<div class="rs-news__desc_list">
 												<ul>
 													<li>Академия</li>
@@ -444,8 +454,8 @@
 												был мудр и обладал удивительной душевной щедростью.</p>
 										</div>
 									</div>
-									<div class="rs-news__footer">
-										<div class="rs-news__arrow">
+									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+										<div class="rs-news__arrow rs-btn-arrow">
 											<svg viewBox="0 0 20 12" fill="none">
 												<path
 													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
@@ -459,10 +469,10 @@
 							<div class="rs-news__block">
 								<a href="./news-page-photo.html">
 									<div class="rs-news__item">
-										<div class="rs-news__img">
+										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
 											<img src="./img/blocks/news/news_1.jpg" alt="">
 										</div>
-										<div class="rs-news__desc">
+										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
 											<div class="rs-news__desc_list">
 												<ul>
 													<li>Академия</li>
@@ -478,8 +488,8 @@
 												Санкт-Петербурга.</p>
 										</div>
 									</div>
-									<div class="rs-news__footer">
-										<div class="rs-news__arrow">
+									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+										<div class="rs-news__arrow rs-btn-arrow">
 											<svg viewBox="0 0 20 12" fill="none">
 												<path
 													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
@@ -491,22 +501,22 @@
 							</div>
 						</div>
 
-						<div class="rs-news__promo">
+						<div class="rs-news__promo" data-aos="fade-left" data-aos-delay="300">
 							<div class="rs-news__block">
 								<a href="./news-page-photo.html">
 									<div class="rs-news__item">
-										<div class="rs-news__img">
+										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
 											<img src="./img/blocks/news/banner_1.1.jpg" alt="">
 										</div>
-										<div class="rs-news__desc">
+										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
 											<h4>Балетный интенсив для учащихся
 												2-4 классов начальной школы</h4>
 											<p>В дни осенних каникул с 1 по 3 ноября 2023 года
 												в Академии танца Бориса Эйфмана пройдет...</p>
 										</div>
 									</div>
-									<div class="rs-news__footer">
-										<div class="rs-news__arrow">
+									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+										<div class="rs-news__arrow rs-btn-arrow">
 											<svg viewBox="0 0 20 12" fill="none">
 												<path
 													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
@@ -520,18 +530,18 @@
 							<div class="rs-news__block">
 								<a href="./news-page-photo.html">
 									<div class="rs-news__item">
-										<div class="rs-news__img">
+										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
 											<img src="./img/blocks/news/banner_1.2.jpg" alt="">
 										</div>
-										<div class="rs-news__desc">
+										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
 											<h4>Дополнительный набор
 												на бесплатное обучение</h4>
 											<p>Проводим дополнительный набор на бесплатное обучение юношей и девушек
 												старше 15 лет...</p>
 										</div>
 									</div>
-									<div class="rs-news__footer">
-										<div class="rs-news__arrow">
+									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+										<div class="rs-news__arrow rs-btn-arrow">
 											<svg viewBox="0 0 20 12" fill="none">
 												<path
 													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
@@ -550,7 +560,7 @@
 			<section class="rs-category">
 				<div class="rs-category__container">
 					<div class="rs-category__grid">
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="100">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_1.jpg" alt="">
@@ -560,7 +570,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="150">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_2.jpg" alt="">
@@ -570,7 +580,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="200">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_3.jpg" alt="">
@@ -580,7 +590,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="250">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_4.jpg" alt="">
@@ -590,7 +600,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="300">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_5.jpg" alt="">
@@ -600,7 +610,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="350">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_6.jpg" alt="">
@@ -610,7 +620,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="400">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_7.jpg" alt="">
@@ -620,7 +630,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="450">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_8.jpg" alt="">
@@ -630,7 +640,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="rs-category__item">
+						<div class="rs-category__item" data-aos="fade-up" data-aos-delay="500">
 							<a href="#">
 								<div class="rs-category__img">
 									<img src="./img/blocks/section/section_9.jpg" alt="">
@@ -660,10 +670,11 @@
 			<section class="rs-theater">
 				<div class="rs-theater__container">
 					<div class="rs-theater__wrapper">
-						<div class="rs-theater__text">
+						<div class="rs-theater__text" data-aos="fade-right" data-aos-delay="100">
 							<h3>Театры, в которых работают выпускники Академии</h3>
 
-							<div class="rs-theater__navigation swiper-navigation">
+							<div class="rs-theater__navigation swiper-navigation" data-aos="fade-right"
+								data-aos-delay="150">
 								<div class="rs-theater__button-prev swiper-button-prev">
 									<svg viewBox="0 0 20 12" fill="none">
 										<path d="M0 6L5 8.88675L5 3.11325L0 6ZM20 5.5L4.5 5.5L4.5 6.5L20 6.5L20 5.5Z"
@@ -680,7 +691,7 @@
 							</div>
 						</div>
 
-						<div class="rs-theater__block">
+						<div class="rs-theater__block" data-aos="fade-up" data-aos-delay="200">
 							<div class="rs-theater__slider swiper">
 								<div class="rs-theater__swiper swiper-wrapper">
 									<div class="rs-theater__slide swiper-slide">
@@ -735,10 +746,11 @@
 			<link rel="stylesheet" href="css/rs-partners.css">
 			<section class="rs-partners">
 				<div class="rs-partners__container">
-					<div class="rs-partners__head">
+					<div class="rs-partners__head" data-aos="fade-right" data-aos-delay="100">
 						<h3>Партнеры Академии</h3>
 
-						<div class="rs-partners__navigation swiper-navigation">
+						<div class="rs-partners__navigation swiper-navigation" data-aos="fade-right"
+							data-aos-delay="150">
 							<div class="rs-partners__button-prev swiper-button-prev">
 								<svg viewBox="0 0 20 12" fill="none">
 									<path d="M0 6L5 8.88675L5 3.11325L0 6ZM20 5.5L4.5 5.5L4.5 6.5L20 6.5L20 5.5Z"
@@ -755,7 +767,7 @@
 						</div>
 					</div>
 
-					<div class="rs-partners__slider swiper">
+					<div class="rs-partners__slider swiper" data-aos="fade-right" data-aos-delay="150">
 						<div class="rs-partners__swiper swiper-wrapper">
 							<div class="rs-partners__slide swiper-slide">
 								<img src="./img/blocks/partners/partner_1.png" alt="">
@@ -1293,8 +1305,13 @@
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-	<script src="js/rs-sliders-init.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+	<script>SmoothScroll({ animationTime: 800, stepSize: 100, accelerationDelta: 50, accelerationMax: 3, touchpadSupport: false, });</script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>AOS.init({ duration: 500, easing: "ease-out-quart", once: true });</script>
+
+	<script src="js/rs-sliders-init.js"></script>
 	<script src="js/rs-script.js"></script>
 
 </body>

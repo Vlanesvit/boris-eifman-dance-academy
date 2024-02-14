@@ -1,19 +1,48 @@
 .rs-gos-links {
   margin: 100px 0px 90px;
 }
+@media (max-width: 1439.98px) {
+  .rs-gos-links {
+    margin: 70px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-gos-links {
+    margin: 30px 0px;
+  }
+}
 .rs-gos-links__col ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0px 30px;
 }
-.rs-gos-links__col ul li:nth-child(-n+3) > a {
-  padding-top: 0px;
+@media (max-width: 991.98px) {
+  .rs-gos-links__col ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px 0px;
+  }
 }
-.rs-gos-links__col ul li:nth-last-child(-n+3) > a {
-  padding-bottom: 0px;
+@media (min-width: 991.98px) {
+  .rs-gos-links__col ul li:nth-child(-n+3) > a {
+    padding-top: 0px;
+  }
+  .rs-gos-links__col ul li:nth-last-child(-n+3) > a {
+    padding-bottom: 0px;
+  }
+  .rs-gos-links__col ul li:not(:nth-last-child(-n+3)) > a {
+    border-bottom: 1px solid #dbdbdb;
+  }
 }
-.rs-gos-links__col ul li:not(:nth-last-child(-n+3)) > a {
-  border-bottom: 1px solid #dbdbdb;
+@media (max-width: 991.98px) {
+  .rs-gos-links__col ul li:first-child > a {
+    padding-top: 0px;
+  }
+  .rs-gos-links__col ul li:last-child > a {
+    padding-bottom: 0px;
+  }
+  .rs-gos-links__col ul li:not(:last-child) > a {
+    border-bottom: 1px solid #dbdbdb;
+  }
 }
 .rs-gos-links__col ul li a {
   height: 100%;
@@ -25,6 +54,17 @@
   line-height: 120%;
   color: #000;
   position: relative;
+}
+@media (max-width: 1169.98px) {
+  .rs-gos-links__col ul li a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-gos-links__col ul li a {
+    padding: 15px;
+    font-size: 13px;
+  }
 }
 @media (any-hover: hover) {
   .rs-gos-links__col ul li a:hover {

@@ -161,16 +161,8 @@
 .rs-banner__video-control svg {
   width: 100%;
   height: 100%;
-}
-.rs-banner__video-control._stop-btn .play-video-btn {
   display: none;
 }
-.rs-banner__video-control._stop-btn .stop-video-btn {
-  display: block;
-}
-.rs-banner__video-control._play-btn .stop-video-btn {
-  display: none;
-}
-.rs-banner__video-control._play-btn .play-video-btn {
+.rs-banner__video-control svg.is-active {
   display: block;
 }

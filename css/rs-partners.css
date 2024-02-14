@@ -1,6 +1,16 @@
 .rs-partners {
   margin: 137px 0px 0px;
 }
+@media (max-width: 1439.98px) {
+  .rs-partners {
+    margin: 70px 0px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-partners {
+    margin: 30px 0px 0px;
+  }
+}
 .rs-partners__head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,6 +24,17 @@
 }
 .rs-partners__slider {
   margin-top: 40px;
+}
+@media (max-width: 1439.98px) {
+  .rs-partners__slider {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-partners__slider {
+    margin-top: 20px;
+    overflow: visible !important;
+  }
 }
 .rs-partners__slide {
   background: rgb(248, 250, 251);

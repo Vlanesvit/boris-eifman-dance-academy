@@ -1,6 +1,14 @@
 .rs-gos-links {
 	margin: 100px 0px 90px;
 
+	@media (max-width: 1439.98px) {
+		margin: 70px 0px;
+	}
+
+	@media (max-width: 991.98px) {
+		margin: 30px 0px;
+	}
+
 	// .rs-gos-links__container
 	&__container {
 	}
@@ -16,22 +24,49 @@
 			grid-template-columns: repeat(3, 1fr);
 			gap: 0px 30px;
 
+			@media (max-width: 991.98px) {
+				grid-template-columns: repeat(1, 1fr);
+				gap: 0px 0px;
+			}
+
 			li {
-				&:nth-child(-n + 3) {
-					& > a {
-						padding-top: 0px;
+				@media (min-width: 991.98px) {
+					&:nth-child(-n + 3) {
+						& > a {
+							padding-top: 0px;
+						}
+					}
+
+					&:nth-last-child(-n + 3) {
+						& > a {
+							padding-bottom: 0px;
+						}
+					}
+
+					&:not(:nth-last-child(-n + 3)) {
+						& > a {
+							border-bottom: 1px solid #dbdbdb;
+						}
 					}
 				}
 
-				&:nth-last-child(-n + 3) {
-					& > a {
-						padding-bottom: 0px;
+				@media (max-width: 991.98px) {
+					&:first-child {
+						& > a {
+							padding-top: 0px;
+						}
 					}
-				}
 
-				&:not(:nth-last-child(-n + 3)) {
-					& > a {
-						border-bottom: 1px solid #dbdbdb;
+					&:last-child {
+						& > a {
+							padding-bottom: 0px;
+						}
+					}
+
+					&:not(:last-child) {
+						& > a {
+							border-bottom: 1px solid #dbdbdb;
+						}
 					}
 				}
 
@@ -45,6 +80,15 @@
 					line-height: 120%;
 					color: #000;
 					position: relative;
+
+					@media (max-width: 1169.98px) {
+						font-size: 14px;
+					}
+
+					@media (max-width: 991.98px) {
+						padding: 15px;
+						font-size: 13px;
+					}
 
 					@media (any-hover: hover) {
 						&:hover {

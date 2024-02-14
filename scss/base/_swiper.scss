@@ -91,6 +91,21 @@
 	border: 1px solid #0c75af;
 	background-color: #fff;
 
+	&::before {
+		content: "";
+		position: absolute;
+		top: -5px;
+		bottom: -5px;
+		right: -5px;
+		left: -5px;
+		width: calc(100% + 10px);
+		height: calc(100% + 10px);
+		border-radius: inherit;
+		background-color: #0c75af;
+		z-index: 0;
+		transition: transform 0.3s ease 0s;
+	}
+
 	&:not(:last-child) {
 		margin-right: 12px;
 	}
@@ -98,6 +113,8 @@
 	svg {
 		width: 20px;
 		height: 12px;
+		position: relative;
+		z-index: 2;
 
 		path {
 			transition: fill 0.3s ease 0s;
@@ -114,18 +131,40 @@
 			}
 		}
 	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				transform: translateX(0);
+			}
+
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
 }
 
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
 	left: -24px;
 	right: auto;
+
+	&::before {
+		transform: translateX(100%);
+	}
 }
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
 	right: -24px;
 	left: auto;
+
+	&::before {
+		transform: translateX(-100%);
+	}
 }
 
 .swiper-navigation {

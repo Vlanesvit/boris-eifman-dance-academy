@@ -83,6 +83,10 @@ header {
 			max-width: 200px;
 		}
 
+		@media (max-width: 1169.98px) {
+			max-width: 160px;
+		}
+
 		@media (max-width: 991.98px) {
 			max-width: 160px;
 		}
@@ -707,6 +711,10 @@ header {
 						margin-right: 20px;
 					}
 
+					@media (max-width: 1169.98px) {
+						margin-right: 15px;
+					}
+
 					@media (max-width: 991.98px) {
 						margin-right: 15px;
 					}
@@ -728,7 +736,7 @@ header {
 						font-size: 12px;
 					}
 
-					@media (max-width: 991.98px) {
+					@media (max-width: 1169.98px) {
 						font-size: 11px;
 					}
 
