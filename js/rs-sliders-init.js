@@ -6,6 +6,100 @@
 function initSliders() {
 	// Перечень слайдеров
 	// rs-theater
+	if (document.querySelector('.rs-news')) {
+		// До этой ширины слайдер будет активным
+		const breakpoint = window.matchMedia('(max-width: 1169.98px)');
+
+		let newsSlider;
+
+		const breakpointChecker = function () {
+			if (breakpoint.matches === true) {
+				// Выключаем слайдер
+				if (newsSlider !== undefined) newsSlider.destroy(true, true);
+				return;
+			} else if (breakpoint.matches === false) {
+				// Включаем слайдер
+				return enableSwiper();
+			}
+		};
+
+		// Инициализация слайдера
+		const enableSwiper = function () {
+			const sliderNews = document.querySelectorAll('.rs-news');
+
+			sliderNews.forEach(sliderFeature => {
+				const slider = sliderFeature.querySelector('.rs-news__slider');
+				// const arrowNext = sliderFeature.querySelector('.rs-news__button-next');
+				// const arrowPrev = sliderFeature.querySelector('.rs-news__button-prev');
+
+				// Перечень слайдеров
+				const sliderSwiper = new Swiper(slider, {
+					// Автопрокрутка
+					autoplay: {
+						// Пауза между прокруткой
+						delay: 1,
+						// delay: 5000,
+						// Закончить на последнем слайде
+						stopOnLastSlide: false,
+						// Отключить после ручного переключения
+						disableOnInteraction: false,
+						// Изменить направление
+						// reverseDirection: true,
+						// Не ждать анимацию
+						waitForTransition: false,
+					},
+
+					// Обновить свайпер
+					// при изменении элементов слайдера
+					observer: true,
+					// при изменении родительских элементов слайдера
+					observeParents: true,
+					// при изменении дочерних элементов слайдера
+					observeSlideChildren: true,
+
+					// Скорость смены слайдов
+					speed: 5000,
+
+					// Включение/отключение
+					// перетаскивание на ПК
+					simulateTouch: true,
+					allowTouchMove: true,
+					// Чувствительность свайпа
+					touchRadio: 1,
+					// Угол срабатывания свайпа/перетаскивания
+					touchAngle: 45,
+
+					// Цикличность слайдера
+					loop: true,
+					loopAdditionalSlides: 4,
+
+					// Вертикальный слайдер
+					direction: 'vertical',
+
+					// Брекпоинты (адаптив)
+					breakpoints: {
+						1169.98: {
+							slidesPerView: 3,
+							spaceBetween: 0,
+						},
+					},
+				});
+
+				// Остановка слайдера при наведении на него
+				slider.addEventListener('mouseenter', function (e) {
+					sliderSwiper.autoplay.stop();
+				})
+				slider.addEventListener('mouseleave', function (e) {
+					sliderSwiper.autoplay.start();
+				})
+			});
+		};
+
+		breakpoint.addListener(breakpointChecker);
+		breakpointChecker();
+	}
+
+	// rs-theater
 	if (document.querySelector('.rs-theater')) {
 		const sliderBlocks = document.querySelectorAll('.rs-theater');
 		sliderBlocks.forEach(sliderBlock => {

@@ -96,57 +96,145 @@ function init() {
 }
 
 /* ====================================
+Навигация по блоку
+==================================== */
+function sidebarNavigation() {
+	const contentBlocks = document.querySelectorAll('.rs-content__anchor');
+	const sidebarLinks = document.querySelectorAll('.rs-content__navigation_body ul li a');
+	const contentBlocksSpoller = document.querySelectorAll('.rs-content__anchor .rs-content__spollers_title');
+
+	if (contentBlocks && sidebarLinks) {
+		/* ====================================
+		Поместить ссылку при скролле к блоку
+		==================================== */
+		function markLink() {
+			contentBlocks.forEach(block => {
+				let top = window.scrollY;
+				let offset = block.offsetTop + 150;
+				let heightBlock = block.offsetHeight;
+				let IdBlock = block.getAttribute('id');
+				let IdBlockSpoller = block.querySelector('.rs-content__spollers_title');
+
+				/* ====================================
+				Открыть спойлер, если на блоке есть якорь 
+				+ проверка на класс (открыто или закрыто)
+				==================================== */
+				if (IdBlockSpoller) {
+					sidebarLinks.forEach(link => {
+						link.addEventListener('click', function () {
+							if (!IdBlockSpoller.classList.contains('_spoller-active')) {
+								IdBlockSpoller.click();
+								console.log('1');
+							}
+						})
+					});
+				}
+
+				if (IdBlock) {
+					if (top >= offset && top < offset + heightBlock) {
+						sidebarLinks.forEach(link => {
+							link.classList.remove('_active-item');
+							document.querySelector('.rs-content__navigation_body ul li a[href*=' + IdBlock + ']').classList.add('_active-item');
+						});
+					}
+				}
+			});
+		}
+		markLink()
+		window.onscroll = () => {
+			markLink()
+		}
+	}
+}
+sidebarNavigation()
+
+/* ====================================
+Загрузка iframe при клике
+==================================== */
+var i, c, y, v, s, n;
+v = document.getElementsByClassName("youtube");
+if (v.length > 0) {
+	s = document.createElement("style");
+	s.type = "text/css";
+	document.body.appendChild(s)
+}
+for (n = 0; n < v.length; n++) {
+	y = v[n];
+	i = document.createElement("img");
+	i.setAttribute("src", "https://i.ytimg.com/vi/" + y.id + "/hqdefault.jpg");
+	i.setAttribute("class", "thumb");
+	c = document.createElement("div");
+	c.setAttribute("class", "play");
+	y.appendChild(i);
+	y.appendChild(c);
+	y.onclick = function () {
+		var a = document.createElement("iframe");
+		// Формирование ссылки на видео, взяв id у блока
+		a.setAttribute("src", "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&enablejsapi=1&rel=0&showinfo=0");
+		a.setAttribute("allowfullscreen", "");
+		a.style.width = this.style.width;
+		a.style.height = this.style.height;
+		this.parentNode.replaceChild(a, this)
+	}
+};
+
+/* В разметке есть блок родительский блок .video-container.
+В нем находиться блок .youtube. Скрипт берет id этого блока и подставляет в уже заготовленную ссылку. 
+Этот id является частью ссылки на видео. 
+Например, (Заготовленная часть) [id блока] - (https://www.youtube.com/embed/)[KwMGI9eaVh4] */
+
+/* ====================================
 Кнопка паузы/запуска видео
 ==================================== */
 function StopAndPlayVideo() {
 	const supportsVideo = !!document.createElement('video').canPlayType;
 	if (supportsVideo) {
-		const video = document.querySelector('.js-bgvideo');
+		const videos = document.querySelectorAll('.bgvideo');
 
-		if (video) {
-			video.controls = false;
-		}
+		videos.forEach(video => {
+			const videoTag = video.querySelector('.bgvideo__tag');
 
-		const playpause = document.getElementById('bgvideoPlaypause');
-		// const stop = document.getElementById('bgvideoStop');
-		// const mute = document.getElementById('bgvideoMute');
-		const playIcon = document.querySelector('.bgvideo__control .video-icon--play');
-		const pauseIcon = document.querySelector('.bgvideo__control .video-icon--pause');
-		// const speakerIcon = document.querySelector('.bgvideo__control .video-icon--speaker');
-		// const muteIcon = document.querySelector('.bgvideo__control .video-icon--mute');
+			if (videoTag) {
+				videoTag.controls = false;
+			}
 
-		if (playpause) {
-			playpause.addEventListener('click', function (e) {
-				playIcon.classList.toggle('is-active');
-				pauseIcon.classList.toggle('is-active');
-				if (video.paused || video.ended) video.play();
-				else video.pause();
-			});
-		}
+			const playpause = video.querySelector('#bgvideoPlaypause');
+			const playIcon = video.querySelector('.bgvideo__control .video-icon--play');
+			const pauseIcon = video.querySelector('.bgvideo__control .video-icon--pause');
 
-		// if (stop) {
-		// 	stop.addEventListener('click', function (e) {
-		// 		if (pauseIcon.classList.contains('is-active')) {
-		// 			pauseIcon.classList.remove('is-active');
-		// 			playIcon.classList.add('is-active');
-		// 		}
-		// 		video.pause();
-		// 		video.currentTime = 0;
-		// 		progress.value = 0;
-		// 	});
-		// }
-
-		// if (stop) {
-		// 	mute.addEventListener('click', function (e) {
-		// 		speakerIcon.classList.toggle('is-active');
-		// 		muteIcon.classList.toggle('is-active');
-		// 		video.muted = !video.muted;
-		// 	});
-		// }
+			if (playpause) {
+				playpause.addEventListener('click', function (e) {
+					playIcon.classList.toggle('is-active');
+					pauseIcon.classList.toggle('is-active');
+					if (videoTag.paused || videoTag.ended) videoTag.play();
+					else videoTag.pause();
+				});
+			}
+		});
 	}
 }
 StopAndPlayVideo()
 
+/* ====================================
+При скролле блок пропадает и сдвигается вниз
+==================================== */
+function fadeBlock(item) {
+	const block = document.querySelector(item);
+	if (block) {
+		window.addEventListener('scroll', function () {
+			const heroOpas = this.scrollY / 1000;
+			if (heroOpas === 0) {
+				block.style.opacity = 1;
+				block.style.transform = `translateY(${(heroOpas * 100) + '%'})`;
+			}
+			if (heroOpas > 0) {
+				block.style.opacity = `${1 - heroOpas}`;
+				block.style.transform = `translateY(${(heroOpas * 100) + '%'})`;
+			}
+		});
+	}
+}
+fadeBlock('.rs-banner__block')
 
 /* ====================================
 Кастомный курсор
@@ -198,13 +286,13 @@ addCursorMove(".rs-category__item", ".rs-category .cursor__circle")
 /*
 Для родителя слойлеров пишем атрибут data-spollers
 Для заголовков слойлеров пишем атрибут data-spoller
-
+	
 Если нужно включать\выключать работу спойлеров на разных размерах экранов
 пишем параметры ширины и типа брейкпоинта.
 Например: 
 data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
 data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
-
+	
 Если нужно что бы в блоке открывался болько один слойлер добавляем атрибут data-one-spoller
 */
 function spollers() {
@@ -329,12 +417,12 @@ if (document.querySelector('[data-spollers]')) {
 Для родителя заголовков табов пишем атрибут data-tabs-titles
 Для родителя блоков табов пишем атрибут data-tabs-body
 Для родителя блоков табов можно указать data-tabs-hash, это втключит добавление хеша
-
+	
 Если нужно чтобы табы открывались с анимацией 
 добавляем к data-tabs data-tabs-animate
 По умолчанию, скорость анимации 500ms, 
 указать свою скорость можно так: data-tabs-animate="1000"
-
+	
 Если нужно чтобы табы превращались в "спойлеры", на неком размере экранов, пишем параметры ширины.
 Например: data-tabs="992" - табы будут превращаться в спойлеры на экранах меньше или равно 992px
 */
@@ -1178,98 +1266,6 @@ if (document.querySelector('.select_one-select')) {
 	}
 	modules.popup = new Popup({});
 })();
-
-/* ====================================
-Позиция sticky
-==================================== */
-function sticky() {
-	let addWindowScrollEvent = false;
-	function stickyBlock() {
-		// data-sticky для родителя внутри которого прилипает блок *
-		// data-sticky-header для родителя, учитываем высоту хедера
-		// data-sticky-top="" для родителя, можно указать отступ сверху
-		// data-sticky-bottom="" для родителя, можно указать отступ снизу
-		// data-sticky-item для прилипающего блока *
-		addWindowScrollEvent = true;
-
-		function stickyBlockInit() {
-			const stickyParents = document.querySelectorAll('[data-sticky]');
-
-			if (stickyParents.length) {
-				stickyParents.forEach(stickyParent => {
-					let stickyConfig = {
-						media: stickyParent.dataset.sticky ? parseInt(stickyParent.dataset.sticky) : null,
-						top: stickyParent.dataset.stickyTop ? parseInt(stickyParent.dataset.stickyTop) : 0,
-						bottom: stickyParent.dataset.stickyBottom ? parseInt(stickyParent.dataset.stickyBottom) : 0,
-						header: stickyParent.hasAttribute('data-sticky-header') ? document.querySelector('header').offsetHeight : 0
-					}
-					stickyBlockItem(stickyParent, stickyConfig);
-				});
-			}
-		}
-		function stickyBlockItem(stickyParent, stickyConfig) {
-			const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]');
-			const headerHeight = stickyConfig.header;
-			const offsetTop = headerHeight + stickyConfig.top;
-			const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
-
-			document.addEventListener("windowScroll", stickyBlockActions);
-			window.addEventListener("resize", stickyBlockActions);
-
-			function stickyBlockActions(e) {
-				const endPoint = (stickyParent.offsetHeight + stickyParent.getBoundingClientRect().top + scrollY) - (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
-				let stickyItemValues = {
-					position: "relative",
-					bottom: "auto",
-					top: "0px",
-					left: "0px",
-					width: "auto"
-				}
-				if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {
-					// if (offsetTop + stickyConfig.bottom + stickyBlockItem.offsetHeight < window.innerHeight) {
-					if (offsetTop + stickyConfig.bottom) {
-						if (scrollY >= startPoint && scrollY <= endPoint) {
-							stickyItemValues.position = `fixed`;
-							stickyItemValues.bottom = `auto`;
-							stickyItemValues.top = `${offsetTop}px`;
-							stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left}px`; // Учесть разницу в ширине экрана?
-							stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
-						} else if (scrollY >= endPoint) {
-							stickyItemValues.position = `absolute`;
-							stickyItemValues.bottom = `${stickyConfig.bottom}px`;
-							stickyItemValues.top = `auto`;
-							stickyItemValues.left = `0px`;
-							stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
-						}
-					}
-				}
-				stickyBlockType(stickyBlockItem, stickyItemValues);
-			}
-		}
-		function stickyBlockType(stickyBlockItem, stickyItemValues) {
-			stickyBlockItem.style.cssText = `position:${stickyItemValues.position};bottom:${stickyItemValues.bottom};top:${stickyItemValues.top};left:${stickyItemValues.left};width:${stickyItemValues.width};`;
-		}
-		stickyBlockInit();
-	}
-	stickyBlock()
-
-	// При подключении модуля обработчик события запустится автоматически
-	setTimeout(() => {
-		if (addWindowScrollEvent) {
-			let windowScroll = new Event("windowScroll");
-			window.addEventListener("scroll", function (e) {
-				document.dispatchEvent(windowScroll);
-			});
-		}
-	}, 0);
-}
-function checkSticky() {
-	if (document.querySelector('[data-sticky]') && (window.innerWidth > 991.98)) {
-		sticky()
-	}
-}
-window.addEventListener('load', checkSticky)
-window.addEventListener('resize', checkSticky)
 
 /* ====================================
 Работа с полями формы

@@ -19,6 +19,8 @@
 
 <body>
 
+	<div class="preloader" data-aos></div>
+
 	<div class="wrapper">
 
 		<!-- ////// Баннер ESIR //////-->
@@ -321,47 +323,51 @@
 		<main class="page">
 
 			<link rel="stylesheet" href="css/rs-banner.css">
-			<section class="rs-banner">
-				<div class="rs-banner__bg" data-aos="fade" data-aos-delay="0">
-					<video playsinline autoplay loop muted poster="./img/blocks/banner/banner_poster-1.jpg"
-						class="js-bgvideo">
-						<source src="./img/blocks/banner/banner_video-1.mp4" type="video/mp4">
-					</video>
-					<!-- <img src="./img/blocks/banner/banner_poster-1.jpg" alt=""> -->
-				</div>
-				<div class="rs-banner__content" data-aos="fade-up" data-aos-delay="100">
-					<div class="rs-banner__container">
-						<div class="rs-banner__wrapper">
-							<a href="#" class="rs-banner__scroll-down">Прокрутите вниз</a>
-							<div class="rs-banner__body">
-								<h1>Академия танца Бориса Эйфмана</h1>
-								<h6>Санкт-Петербургское государственное
-									бюджетное профессиональное образовательное
-									учреждение</h6>
+			<section class="rs-banner bgvideo">
+				<div class="rs-banner__block">
+					<div class="rs-banner__bg">
+						<video playsinline autoplay loop muted poster="./img/blocks/banner/banner_poster-1.jpg"
+							class="bgvideo__tag">
+							<source src="./img/blocks/banner/banner_video-1.mp4" type="video/mp4">
+						</video>
+						<!-- <img src="./img/blocks/banner/banner_poster-1.jpg" alt=""> -->
+					</div>
+					<div class="rs-banner__content" data-aos="fade-up" data-aos-delay="100">
+						<div class="rs-banner__container">
+							<div class="rs-banner__wrapper">
+								<a href="#" class="rs-banner__scroll-down" data-goto="#next"
+									data-goto-top="100">Прокрутите
+									вниз</a>
+								<div class="rs-banner__body">
+									<h1>Академия танца Бориса Эйфмана</h1>
+									<h6>Санкт-Петербургское государственное
+										бюджетное профессиональное образовательное
+										учреждение</h6>
+								</div>
+								<button type="button" class="rs-banner__video-control bgvideo__control"
+									id="bgvideoPlaypause">
+									<svg class="video-icon--pause is-active" width="14" height="16" viewBox="0 0 14 16"
+										fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.649414" y="0.649414" width="4.48046" height="14.0713" rx="0.870115"
+											stroke="black" />
+										<rect x="8.87012" y="0.649414" width="4.48046" height="14.0713" rx="0.870115"
+											stroke="black" />
+									</svg>
+									<svg class="video-icon--play" width="16" height="18" viewBox="0 0 16 18" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12.438 6.56162C13.8549 7.41973 14.5633 7.84879 14.8062 8.39812C15.0184 8.87788 15.0184 9.42095 14.8062 9.90071C14.5633 10.45 13.8549 10.8791 12.438 11.7372L5.78341 15.7677C4.21089 16.7201 3.42463 17.1963 2.77579 17.1458C2.21021 17.1017 1.69177 16.8233 1.35345 16.3818C0.965332 15.8754 0.965332 14.9769 0.965332 13.1799V5.11893C0.965332 3.32191 0.965332 2.4234 1.35345 1.91699C1.69177 1.47557 2.21021 1.19712 2.77579 1.15306C3.42463 1.10251 4.21089 1.57872 5.78341 2.53114L12.438 6.56162Z"
+											stroke="black" stroke-linejoin="round" />
+									</svg>
+								</button>
 							</div>
-							<button type="button" class="rs-banner__video-control bgvideo__control"
-								id="bgvideoPlaypause">
-								<svg class="video-icon--pause is-active" width="14" height="16" viewBox="0 0 14 16"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="0.649414" y="0.649414" width="4.48046" height="14.0713" rx="0.870115"
-										stroke="black" />
-									<rect x="8.87012" y="0.649414" width="4.48046" height="14.0713" rx="0.870115"
-										stroke="black" />
-								</svg>
-								<svg class="video-icon--play" width="16" height="18" viewBox="0 0 16 18" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M12.438 6.56162C13.8549 7.41973 14.5633 7.84879 14.8062 8.39812C15.0184 8.87788 15.0184 9.42095 14.8062 9.90071C14.5633 10.45 13.8549 10.8791 12.438 11.7372L5.78341 15.7677C4.21089 16.7201 3.42463 17.1963 2.77579 17.1458C2.21021 17.1017 1.69177 16.8233 1.35345 16.3818C0.965332 15.8754 0.965332 14.9769 0.965332 13.1799V5.11893C0.965332 3.32191 0.965332 2.4234 1.35345 1.91699C1.69177 1.47557 2.21021 1.19712 2.77579 1.15306C3.42463 1.10251 4.21089 1.57872 5.78341 2.53114L12.438 6.56162Z"
-										stroke="black" stroke-linejoin="round" />
-								</svg>
-							</button>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<link rel="stylesheet" href="css/rs-quote.css">
-			<section class="rs-quote">
+			<section class="rs-quote" id="next">
 				<div class="rs-quote__container">
 					<div class="rs-quote__wrapper">
 						<div class="rs-quote__img" data-reveal-anim data-reveal-anim-left data-aos>
@@ -400,156 +406,287 @@
 							<div class="rs-news__head">
 								<h2 data-aos="fade-up" data-aos-delay="100">Новости академии</h2>
 							</div>
-							<div class="rs-news__block" data-aos="fade-right" data-aos-delay="100">
-								<a href="./news-page-photo.html">
-									<div class="rs-news__item">
-										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-											<img src="./img/blocks/news/news_1.jpg" alt="">
-										</div>
-										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-											<div class="rs-news__desc_list">
-												<ul>
-													<li>Академия</li>
-													<li>Выставки</li>
-													<li>Мероприятия</li>
-												</ul>
-												<div class="rs-news__desc_data">05/10/2023</div>
+							<div class="rs-news__list_body" data-aos="fade-right" data-aos-delay="100">
+								<div class="rs-news__slider swiper">
+									<div class="rs-news__swiper swiper-wrapper">
+										<div class="rs-news__slide swiper-slide">
+											<div class="rs-news__block">
+												<a href="./news-page-photo.html">
+													<div class="rs-news__item">
+														<div class="rs-news__img">
+															<img src="./img/blocks/news/news_1.jpg" alt="">
+														</div>
+														<div class="rs-news__desc">
+															<div class="rs-news__desc_list">
+																<ul>
+																	<li>Академия</li>
+																	<li>Выставки</li>
+																	<li>Мероприятия</li>
+																</ul>
+																<div class="rs-news__desc_data">05/10/2023</div>
+															</div>
+															<h4>Академия танца Бориса Эйфмана готовится к Международной
+																выставке-форуму «Россия» на ВДНХ</h4>
+															<p>В мультимедийном центре Библиотеки имени Маяковского 11
+																октября 2023
+																года состоялся круглый стол, посвященный достижениям в
+																культурной
+																сфере
+																Санкт-Петербурга.</p>
+														</div>
+													</div>
+													<div class="rs-news__footer">
+														<div class="rs-news__arrow rs-btn-arrow">
+															<svg viewBox="0 0 20 12" fill="none">
+																<path
+																	d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+																	fill="rgb(11, 113, 173)" />
+															</svg>
+														</div>
+													</div>
+												</a>
 											</div>
-											<h4>Академия танца Бориса Эйфмана готовится к Международной
-												выставке-форуму «Россия» на ВДНХ</h4>
-											<p>В мультимедийном центре Библиотеки имени Маяковского 11 октября 2023
-												года состоялся круглый стол, посвященный достижениям в культурной сфере
-												Санкт-Петербурга.</p>
 										</div>
-									</div>
-									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-										<div class="rs-news__arrow rs-btn-arrow">
-											<svg viewBox="0 0 20 12" fill="none">
-												<path
-													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-													fill="rgb(11, 113, 173)" />
-											</svg>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<div class="rs-news__block">
-								<a href="./news-page-photo.html">
-									<div class="rs-news__item">
-										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-											<img src="./img/blocks/news/news_2.jpg" alt="">
-										</div>
-										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-											<div class="rs-news__desc_list">
-												<ul>
-													<li>Академия</li>
-													<li>Выставки</li>
-													<li>Мероприятия</li>
-												</ul>
-												<div class="rs-news__desc_data">05/10/2023</div>
+										<div class="rs-news__slide swiper-slide">
+											<div class="rs-news__block">
+												<a href="./news-page-photo.html">
+													<div class="rs-news__item">
+														<div class="rs-news__img">
+															<img src="./img/blocks/news/news_2.jpg" alt="">
+														</div>
+														<div class="rs-news__desc">
+															<div class="rs-news__desc_list">
+																<ul>
+																	<li>Академия</li>
+																	<li>Выставки</li>
+																	<li>Мероприятия</li>
+																</ul>
+																<div class="rs-news__desc_data">05/10/2023</div>
+															</div>
+															<h4>С Днем учителя!</h4>
+															<p>У каждого из нас есть в жизни свой Учитель - тот, кто
+																наделил
+																знаниями,
+																был мудр и обладал удивительной душевной щедростью.</p>
+														</div>
+													</div>
+													<div class="rs-news__footer">
+														<div class="rs-news__arrow rs-btn-arrow">
+															<svg viewBox="0 0 20 12" fill="none">
+																<path
+																	d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+																	fill="rgb(11, 113, 173)" />
+															</svg>
+														</div>
+													</div>
+												</a>
 											</div>
-											<h4>С Днем учителя!</h4>
-											<p>У каждого из нас есть в жизни свой Учитель - тот, кто наделил знаниями,
-												был мудр и обладал удивительной душевной щедростью.</p>
 										</div>
-									</div>
-									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-										<div class="rs-news__arrow rs-btn-arrow">
-											<svg viewBox="0 0 20 12" fill="none">
-												<path
-													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-													fill="rgb(11, 113, 173)" />
-											</svg>
-										</div>
-									</div>
-								</a>
-							</div>
-
-							<div class="rs-news__block">
-								<a href="./news-page-photo.html">
-									<div class="rs-news__item">
-										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-											<img src="./img/blocks/news/news_1.jpg" alt="">
-										</div>
-										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-											<div class="rs-news__desc_list">
-												<ul>
-													<li>Академия</li>
-													<li>Выставки</li>
-													<li>Мероприятия</li>
-												</ul>
-												<div class="rs-news__desc_data">05/10/2023</div>
+										<div class="rs-news__slide swiper-slide">
+											<div class="rs-news__block">
+												<a href="./news-page-photo.html">
+													<div class="rs-news__item">
+														<div class="rs-news__img">
+															<img src="./img/blocks/news/news_1.jpg" alt="">
+														</div>
+														<div class="rs-news__desc">
+															<div class="rs-news__desc_list">
+																<ul>
+																	<li>Академия</li>
+																	<li>Выставки</li>
+																	<li>Мероприятия</li>
+																</ul>
+																<div class="rs-news__desc_data">05/10/2023</div>
+															</div>
+															<h4>Академия танца Бориса Эйфмана готовится к Международной
+																выставке-форуму «Россия» на ВДНХ</h4>
+															<p>В мультимедийном центре Библиотеки имени Маяковского 11
+																октября 2023
+																года состоялся круглый стол, посвященный достижениям в
+																культурной
+																сфере
+																Санкт-Петербурга.</p>
+														</div>
+													</div>
+													<div class="rs-news__footer">
+														<div class="rs-news__arrow rs-btn-arrow">
+															<svg viewBox="0 0 20 12" fill="none">
+																<path
+																	d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+																	fill="rgb(11, 113, 173)" />
+															</svg>
+														</div>
+													</div>
+												</a>
 											</div>
-											<h4>Академия танца Бориса Эйфмана готовится к Международной
-												выставке-форуму «Россия» на ВДНХ</h4>
-											<p>В мультимедийном центре Библиотеки имени Маяковского 11 октября 2023
-												года состоялся круглый стол, посвященный достижениям в культурной сфере
-												Санкт-Петербурга.</p>
+										</div>
+										<div class="rs-news__slide swiper-slide">
+											<div class="rs-news__block">
+												<a href="./news-page-photo.html">
+													<div class="rs-news__item">
+														<div class="rs-news__img">
+															<img src="./img/blocks/news/news_1.jpg" alt="">
+														</div>
+														<div class="rs-news__desc">
+															<div class="rs-news__desc_list">
+																<ul>
+																	<li>Академия</li>
+																	<li>Выставки</li>
+																	<li>Мероприятия</li>
+																</ul>
+																<div class="rs-news__desc_data">05/10/2023</div>
+															</div>
+															<h4>Академия танца Бориса Эйфмана готовится к Международной
+																выставке-форуму «Россия» на ВДНХ</h4>
+															<p>В мультимедийном центре Библиотеки имени Маяковского 11
+																октября 2023
+																года состоялся круглый стол, посвященный достижениям в
+																культурной
+																сфере
+																Санкт-Петербурга.</p>
+														</div>
+													</div>
+													<div class="rs-news__footer">
+														<div class="rs-news__arrow rs-btn-arrow">
+															<svg viewBox="0 0 20 12" fill="none">
+																<path
+																	d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+																	fill="rgb(11, 113, 173)" />
+															</svg>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="rs-news__slide swiper-slide">
+											<div class="rs-news__block">
+												<a href="./news-page-photo.html">
+													<div class="rs-news__item">
+														<div class="rs-news__img">
+															<img src="./img/blocks/news/news_2.jpg" alt="">
+														</div>
+														<div class="rs-news__desc">
+															<div class="rs-news__desc_list">
+																<ul>
+																	<li>Академия</li>
+																	<li>Выставки</li>
+																	<li>Мероприятия</li>
+																</ul>
+																<div class="rs-news__desc_data">05/10/2023</div>
+															</div>
+															<h4>С Днем учителя!</h4>
+															<p>У каждого из нас есть в жизни свой Учитель - тот, кто
+																наделил
+																знаниями,
+																был мудр и обладал удивительной душевной щедростью.</p>
+														</div>
+													</div>
+													<div class="rs-news__footer">
+														<div class="rs-news__arrow rs-btn-arrow">
+															<svg viewBox="0 0 20 12" fill="none">
+																<path
+																	d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+																	fill="rgb(11, 113, 173)" />
+															</svg>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="rs-news__slide swiper-slide">
+											<div class="rs-news__block">
+												<a href="./news-page-photo.html">
+													<div class="rs-news__item">
+														<div class="rs-news__img">
+															<img src="./img/blocks/news/news_1.jpg" alt="">
+														</div>
+														<div class="rs-news__desc">
+															<div class="rs-news__desc_list">
+																<ul>
+																	<li>Академия</li>
+																	<li>Выставки</li>
+																	<li>Мероприятия</li>
+																</ul>
+																<div class="rs-news__desc_data">05/10/2023</div>
+															</div>
+															<h4>Академия танца Бориса Эйфмана готовится к Международной
+																выставке-форуму «Россия» на ВДНХ</h4>
+															<p>В мультимедийном центре Библиотеки имени Маяковского 11
+																октября 2023
+																года состоялся круглый стол, посвященный достижениям в
+																культурной
+																сфере
+																Санкт-Петербурга.</p>
+														</div>
+													</div>
+													<div class="rs-news__footer">
+														<div class="rs-news__arrow rs-btn-arrow">
+															<svg viewBox="0 0 20 12" fill="none">
+																<path
+																	d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+																	fill="rgb(11, 113, 173)" />
+															</svg>
+														</div>
+													</div>
+												</a>
+											</div>
 										</div>
 									</div>
-									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-										<div class="rs-news__arrow rs-btn-arrow">
-											<svg viewBox="0 0 20 12" fill="none">
-												<path
-													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-													fill="rgb(11, 113, 173)" />
-											</svg>
-										</div>
-									</div>
-								</a>
+								</div>
 							</div>
 						</div>
 
 						<div class="rs-news__promo" data-aos="fade-left" data-aos-delay="300">
-							<div class="rs-news__block">
-								<a href="./news-page-photo.html">
-									<div class="rs-news__item">
-										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-											<img src="./img/blocks/news/banner_1.1.jpg" alt="">
+							<div class="rs-news__promo_body">
+								<div class="rs-news__block">
+									<a href="./news-page-photo.html">
+										<div class="rs-news__item">
+											<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
+												<img src="./img/blocks/news/banner_1.1.jpg" alt="">
+											</div>
+											<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
+												<h4>Балетный интенсив для учащихся
+													2-4 классов начальной школы</h4>
+												<p>В дни осенних каникул с 1 по 3 ноября 2023 года
+													в Академии танца Бориса Эйфмана пройдет...</p>
+											</div>
 										</div>
-										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-											<h4>Балетный интенсив для учащихся
-												2-4 классов начальной школы</h4>
-											<p>В дни осенних каникул с 1 по 3 ноября 2023 года
-												в Академии танца Бориса Эйфмана пройдет...</p>
+										<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+											<div class="rs-news__arrow rs-btn-arrow">
+												<svg viewBox="0 0 20 12" fill="none">
+													<path
+														d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+														fill="rgb(11, 113, 173)" />
+												</svg>
+											</div>
 										</div>
-									</div>
-									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-										<div class="rs-news__arrow rs-btn-arrow">
-											<svg viewBox="0 0 20 12" fill="none">
-												<path
-													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-													fill="rgb(11, 113, 173)" />
-											</svg>
-										</div>
-									</div>
-								</a>
-							</div>
+									</a>
+								</div>
 
-							<div class="rs-news__block">
-								<a href="./news-page-photo.html">
-									<div class="rs-news__item">
-										<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-											<img src="./img/blocks/news/banner_1.2.jpg" alt="">
+								<div class="rs-news__block">
+									<a href="./news-page-photo.html">
+										<div class="rs-news__item">
+											<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
+												<img src="./img/blocks/news/banner_1.2.jpg" alt="">
+											</div>
+											<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
+												<h4>Дополнительный набор
+													на бесплатное обучение</h4>
+												<p>Проводим дополнительный набор на бесплатное обучение юношей и девушек
+													старше 15 лет...</p>
+											</div>
 										</div>
-										<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-											<h4>Дополнительный набор
-												на бесплатное обучение</h4>
-											<p>Проводим дополнительный набор на бесплатное обучение юношей и девушек
-												старше 15 лет...</p>
+										<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
+											<div class="rs-news__arrow rs-btn-arrow">
+												<svg viewBox="0 0 20 12" fill="none">
+													<path
+														d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+														fill="rgb(11, 113, 173)" />
+												</svg>
+											</div>
 										</div>
-									</div>
-									<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-										<div class="rs-news__arrow rs-btn-arrow">
-											<svg viewBox="0 0 20 12" fill="none">
-												<path
-													d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-													fill="rgb(11, 113, 173)" />
-											</svg>
-										</div>
-									</div>
-								</a>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1284,7 +1421,8 @@
 											</div>
 										</div>
 									</div>
-									<a href="#" class="rs-btn _btn-border-white scroll-up">Вверх страницы</a>
+									<a href="#" class="rs-btn _btn-border-white scroll-up" data-goto=".wrapper">Вверх
+										страницы</a>
 								</div>
 							</div>
 							<div class="rs-footer__bottom">

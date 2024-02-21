@@ -1,9 +1,24 @@
 .rs-banner {
 	height: 100vh;
 	max-height: 973px;
+	background-color: #000000;
 
 	@media (max-width: 991.98px) {
 		max-height: 604px;
+	}
+
+	&._small-banner {
+		max-height: 645px;
+
+		@media (max-width: 991.98px) {
+			max-height: 530px;
+		}
+	}
+
+	&__block {
+		height: 100%;
+		width: 100%;
+		position: relative;
 	}
 
 	// .rs-banner__bg
@@ -27,6 +42,10 @@
 				rgba(0, 0, 0, 0.55) 24.795%,
 				rgba(0, 0, 0, 0.41) 100%
 			);
+
+			._small-banner & {
+				display: none;
+			}
 		}
 
 		iframe,
@@ -35,6 +54,17 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+
+			&.rs-banner__bg--desk {
+				@media (max-width: 991.98px) {
+					display: none;
+				}
+			}
+			&.rs-banner__bg--mob {
+				@media (min-width: 991.98px) {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -56,6 +86,14 @@
 		@media (max-width: 991.98px) {
 			padding: 20px 0px;
 		}
+
+		._small-banner & {
+			padding: 40px 0px;
+
+			@media (max-width: 991.98px) {
+				padding: 30px 0px;
+			}
+		}
 	}
 
 	// .rs-banner__container
@@ -76,6 +114,10 @@
 
 		@media (max-width: 991.98px) {
 			padding: 0px 50px 0px 0px;
+		}
+
+		._small-banner & {
+			padding: 0px;
 		}
 	}
 
@@ -125,38 +167,29 @@
 				margin-top: 5px;
 			}
 		}
+
+		._small-banner & {
+			h1 {
+				font-family: "Jost", sans-serif;
+				font-weight: 200;
+				font-size: 60px;
+				line-height: 110%;
+
+				@media (max-width: 1439.98px) {
+					font-size: 45px;
+				}
+
+				@media (max-width: 991.98px) {
+					font-size: 30px;
+				}
+			}
+		}
 	}
 
-	// .rs-banner__video-&__video-control
+	// .rs-banner__video-control
 	&__video-control {
 		position: absolute;
 		bottom: 5px;
 		right: 0;
-		border: 1px solid rgb(190, 190, 190);
-		border-radius: 50%;
-		background: rgb(255, 255, 255);
-		width: 40px;
-		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 13px;
-
-		@media (max-width: 991.98px) {
-			width: 30px;
-			height: 30px;
-			bottom: 0px;
-			padding: 9px;
-		}
-
-		svg {
-			width: 100%;
-			height: 100%;
-			display: none;
-
-			&.is-active {
-				display: block;
-			}
-		}
 	}
 }

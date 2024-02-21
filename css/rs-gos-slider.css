@@ -1,14 +1,14 @@
 .rs-gos-slider {
-  margin: 90px 0px 40px;
+  padding: 90px 0px 40px;
 }
 @media (max-width: 1439.98px) {
   .rs-gos-slider {
-    margin: 70px 0px 40px;
+    padding: 70px 0px 40px;
   }
 }
 @media (max-width: 991.98px) {
   .rs-gos-slider {
-    margin: 30px 0px;
+    padding: 30px 0px;
   }
 }
 .rs-gos-slider__wrapper {

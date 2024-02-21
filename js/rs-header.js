@@ -144,7 +144,7 @@ let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop
 		let headerItem = "";
 		let headerItemHeight = 0;
 		if (noHeader) {
-			headerItem = ".header";
+			headerItem = ".rs-header";
 			const headerElement = document.querySelector(headerItem);
 			if (!headerElement.classList.contains("_header-scroll")) {
 				headerElement.style.cssText = `transition-duration: 0s;`;
