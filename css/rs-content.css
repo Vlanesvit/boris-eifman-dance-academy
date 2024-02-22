@@ -1,7 +1,65 @@
+.rs-content__title {
+  border-bottom: 1px solid #dbdbdb;
+}
+@media (max-width: 991.98px) {
+  .rs-content__title {
+    border-bottom: none;
+  }
+}
+.rs-content__title h1 {
+  font-family: "Jost", sans-serif;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 110%;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1810px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (max-width: 1439.98px) {
+  .rs-content__title h1 {
+    font-size: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-content__title h1 {
+    font-size: 35px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-content__title h1 {
+    font-size: 20px;
+    max-width: 768px;
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-content__title h1 {
+    max-width: 100%;
+  }
+}
 .rs-content__wrapper {
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb;
   position: relative;
+}
+.rs-admin .rs-content__wrapper {
+  border-right: none;
+}
+@media (max-width: 991.98px) {
+  .rs-admin .rs-content__wrapper {
+    border-right: none;
+    border-left: none;
+  }
 }
 @media (min-width: 991.98px) {
   .rs-content__wrapper {
@@ -16,6 +74,88 @@
   padding-bottom: 90px;
   position: relative;
   display: none;
+}
+.rs-admin .rs-content__navigation {
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .rs-admin .rs-content__navigation {
+    border-right: none;
+  }
+}
+.rs-content__navigation_close {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .rs-admin .rs-content__navigation_close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 14px;
+    height: 14px;
+    z-index: 10;
+  }
+}
+.rs-content__navigation_btn {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .rs-admin .rs-content__navigation_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    font-family: "Tilda Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    color: #000;
+    border: 1px solid #dbdbdb;
+    border-radius: 50px;
+    margin-bottom: -10px;
+  }
+  .rs-admin .rs-content__navigation_btn:after {
+    content: "";
+    background-image: url("../img/icons/select-arrow-blue.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-width: 13px;
+    max-height: 8px;
+    min-width: 13px;
+    min-height: 8px;
+    margin: 0px 0px 0px 8px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+}
+.rs-admin .rs-content__navigation {
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+@media (max-width: 1699.98px) {
+  .rs-admin .rs-content__navigation {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .rs-admin .rs-content__navigation {
+    padding: 30px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-admin .rs-content__navigation {
+    padding: 0;
+  }
 }
 @media (max-width: 1699.98px) {
   .rs-content__navigation {
@@ -47,12 +187,43 @@
     top: 60px;
   }
 }
+@media (max-width: 991.98px) {
+  .rs-content__navigation_body {
+    top: 0;
+    position: fixed;
+    top: 30px;
+    bottom: 30px;
+    right: 20px;
+    left: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    background: #fff;
+    z-index: 1000;
+    max-height: calc(100vh - 60px);
+    min-width: calc(100% - 40px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .menu-navigation-open .rs-content__navigation_body {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 .rs-content__navigation_body ul li:not(:last-child) {
   margin-bottom: 30px;
 }
 @media (max-width: 1439.98px) {
   .rs-content__navigation_body ul li:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-content__navigation_body ul li:not(:last-child) {
+    margin-bottom: 15px;
   }
 }
 .rs-content__navigation_body ul li a {
@@ -81,6 +252,12 @@
     font-size: 14px;
   }
 }
+@media (max-width: 991.98px) {
+  .rs-content__navigation_body ul li a {
+    font-size: 13px;
+    padding: 0;
+  }
+}
 .rs-content__navigation_body ul li a::before {
   content: "";
   position: absolute;
@@ -91,6 +268,11 @@
   background-color: #0c75af;
   -webkit-transition: height 0.3s ease 0s;
   transition: height 0.3s ease 0s;
+}
+@media (max-width: 991.98px) {
+  .rs-content__navigation_body ul li a::before {
+    display: none;
+  }
 }
 .rs-content__navigation_body ul li a._active-item::before {
   top: 0;
@@ -183,7 +365,7 @@
     margin: 10px 0px;
   }
 }
-.rs-content__part ul.marker-list li {
+.rs-content ul.marker-list li {
   padding-left: 19px;
   position: relative;
   font-weight: 400;
@@ -192,30 +374,30 @@
   letter-spacing: 0.03em;
 }
 @media (max-width: 1699.98px) {
-  .rs-content__part ul.marker-list li {
+  .rs-content ul.marker-list li {
     font-size: 18px;
   }
 }
 @media (max-width: 1439.98px) {
-  .rs-content__part ul.marker-list li {
+  .rs-content ul.marker-list li {
     font-size: 16px;
   }
 }
 @media (max-width: 1169.98px) {
-  .rs-content__part ul.marker-list li {
+  .rs-content ul.marker-list li {
     font-size: 14px;
   }
 }
 @media (max-width: 991.98px) {
-  .rs-content__part ul.marker-list li {
+  .rs-content ul.marker-list li {
     font-size: 13px;
   }
 }
-.rs-content__part ul.marker-list li strong {
+.rs-content ul.marker-list li strong {
   color: #0c75af;
   font-weight: 700;
 }
-.rs-content__part ul.marker-list li::before {
+.rs-content ul.marker-list li::before {
   content: "";
   position: absolute;
   top: 12px;
@@ -226,109 +408,109 @@
   background-color: #0c75af;
 }
 @media (max-width: 1699.98px) {
-  .rs-content__part ul.marker-list li::before {
+  .rs-content ul.marker-list li::before {
     top: 10px;
   }
 }
 @media (max-width: 1169.98px) {
-  .rs-content__part ul.marker-list li::before {
+  .rs-content ul.marker-list li::before {
     top: 8px;
   }
 }
 @media (max-width: 991.98px) {
-  .rs-content__part ul.marker-list li::before {
+  .rs-content ul.marker-list li::before {
     top: 6px;
   }
 }
-.rs-content__part ul.marker-list li:not(:last-child) {
+.rs-content ul.marker-list li:not(:last-child) {
   margin-bottom: 20px;
 }
 @media (max-width: 991.98px) {
-  .rs-content__part ul.marker-list li:not(:last-child) {
+  .rs-content ul.marker-list li:not(:last-child) {
     margin-bottom: 10px;
   }
 }
-.rs-content__part table {
+.rs-content table {
   table-layout: fixed;
   border-spacing: 0px;
   border-collapse: collapse;
   width: 100%;
 }
-.rs-content__part table.table-4 {
+.rs-content table.table-4 {
   table-layout: auto;
 }
-.rs-content__part table.table-4 thead tr td,
-.rs-content__part table.table-4 thead tr th,
-.rs-content__part table.table-4 tbody tr td,
-.rs-content__part table.table-4 tbody tr th {
+.rs-content table.table-4 thead tr td,
+.rs-content table.table-4 thead tr th,
+.rs-content table.table-4 tbody tr td,
+.rs-content table.table-4 tbody tr th {
   font-size: 18px;
   line-height: 120%;
 }
 @media (max-width: 1439.98px) {
-  .rs-content__part table.table-4 thead tr td,
-  .rs-content__part table.table-4 thead tr th,
-  .rs-content__part table.table-4 tbody tr td,
-  .rs-content__part table.table-4 tbody tr th {
+  .rs-content table.table-4 thead tr td,
+  .rs-content table.table-4 thead tr th,
+  .rs-content table.table-4 tbody tr td,
+  .rs-content table.table-4 tbody tr th {
     font-size: 16px;
   }
 }
 @media (max-width: 1169.98px) {
-  .rs-content__part table.table-4 thead tr td,
-  .rs-content__part table.table-4 thead tr th,
-  .rs-content__part table.table-4 tbody tr td,
-  .rs-content__part table.table-4 tbody tr th {
+  .rs-content table.table-4 thead tr td,
+  .rs-content table.table-4 thead tr th,
+  .rs-content table.table-4 tbody tr td,
+  .rs-content table.table-4 tbody tr th {
     font-size: 14px;
   }
 }
 @media (max-width: 991.98px) {
-  .rs-content__part table.table-4 thead tr td,
-  .rs-content__part table.table-4 thead tr th,
-  .rs-content__part table.table-4 tbody tr td,
-  .rs-content__part table.table-4 tbody tr th {
+  .rs-content table.table-4 thead tr td,
+  .rs-content table.table-4 thead tr th,
+  .rs-content table.table-4 tbody tr td,
+  .rs-content table.table-4 tbody tr th {
     font-size: 13px;
   }
 }
-.rs-content__part table.table-4 thead tr td:last-child,
-.rs-content__part table.table-4 thead tr th:last-child,
-.rs-content__part table.table-4 tbody tr td:last-child,
-.rs-content__part table.table-4 tbody tr th:last-child {
+.rs-content table.table-4 thead tr td:last-child,
+.rs-content table.table-4 thead tr th:last-child,
+.rs-content table.table-4 tbody tr td:last-child,
+.rs-content table.table-4 tbody tr th:last-child {
   font-weight: 400;
 }
 @media (min-width: 1439.98px) {
-  .rs-content__part table.table-4 thead tr td:nth-child(1),
-  .rs-content__part table.table-4 thead tr th:nth-child(1),
-  .rs-content__part table.table-4 tbody tr td:nth-child(1),
-  .rs-content__part table.table-4 tbody tr th:nth-child(1) {
+  .rs-content table.table-4 thead tr td:nth-child(1),
+  .rs-content table.table-4 thead tr th:nth-child(1),
+  .rs-content table.table-4 tbody tr td:nth-child(1),
+  .rs-content table.table-4 tbody tr th:nth-child(1) {
     width: 209px;
   }
-  .rs-content__part table.table-4 thead tr td:nth-child(2),
-  .rs-content__part table.table-4 thead tr th:nth-child(2),
-  .rs-content__part table.table-4 tbody tr td:nth-child(2),
-  .rs-content__part table.table-4 tbody tr th:nth-child(2) {
+  .rs-content table.table-4 thead tr td:nth-child(2),
+  .rs-content table.table-4 thead tr th:nth-child(2),
+  .rs-content table.table-4 tbody tr td:nth-child(2),
+  .rs-content table.table-4 tbody tr th:nth-child(2) {
     width: 297px;
   }
-  .rs-content__part table.table-4 thead tr td:nth-child(3),
-  .rs-content__part table.table-4 thead tr th:nth-child(3),
-  .rs-content__part table.table-4 tbody tr td:nth-child(3),
-  .rs-content__part table.table-4 tbody tr th:nth-child(3) {
+  .rs-content table.table-4 thead tr td:nth-child(3),
+  .rs-content table.table-4 thead tr th:nth-child(3),
+  .rs-content table.table-4 tbody tr td:nth-child(3),
+  .rs-content table.table-4 tbody tr th:nth-child(3) {
     width: 370px;
   }
-  .rs-content__part table.table-4 thead tr td:nth-child(4),
-  .rs-content__part table.table-4 thead tr th:nth-child(4),
-  .rs-content__part table.table-4 tbody tr td:nth-child(4),
-  .rs-content__part table.table-4 tbody tr th:nth-child(4) {
+  .rs-content table.table-4 thead tr td:nth-child(4),
+  .rs-content table.table-4 thead tr th:nth-child(4),
+  .rs-content table.table-4 tbody tr td:nth-child(4),
+  .rs-content table.table-4 tbody tr th:nth-child(4) {
     width: 297px;
   }
 }
 @media (min-width: 1439.98px) {
-  .rs-content__part table.table-4 tbody tr td {
+  .rs-content table.table-4 tbody tr td {
     height: 332px;
   }
 }
-.rs-content__part table thead tr th,
-.rs-content__part table thead tr td,
-.rs-content__part table tbody tr th,
-.rs-content__part table tbody tr td {
+.rs-content table thead tr th,
+.rs-content table thead tr td,
+.rs-content table tbody tr th,
+.rs-content table tbody tr td {
   padding: 20px 19px;
   font-weight: 400;
   font-size: 20px;
@@ -341,56 +523,56 @@
   text-align: left;
 }
 @media (max-width: 1699.98px) {
-  .rs-content__part table thead tr th,
-  .rs-content__part table thead tr td,
-  .rs-content__part table tbody tr th,
-  .rs-content__part table tbody tr td {
+  .rs-content table thead tr th,
+  .rs-content table thead tr td,
+  .rs-content table tbody tr th,
+  .rs-content table tbody tr td {
     font-size: 18px;
   }
 }
 @media (max-width: 1439.98px) {
-  .rs-content__part table thead tr th,
-  .rs-content__part table thead tr td,
-  .rs-content__part table tbody tr th,
-  .rs-content__part table tbody tr td {
+  .rs-content table thead tr th,
+  .rs-content table thead tr td,
+  .rs-content table tbody tr th,
+  .rs-content table tbody tr td {
     font-size: 16px;
     padding: 15px;
   }
 }
 @media (max-width: 1169.98px) {
-  .rs-content__part table thead tr th,
-  .rs-content__part table thead tr td,
-  .rs-content__part table tbody tr th,
-  .rs-content__part table tbody tr td {
+  .rs-content table thead tr th,
+  .rs-content table thead tr td,
+  .rs-content table tbody tr th,
+  .rs-content table tbody tr td {
     font-size: 14px;
     padding: 10px;
   }
 }
 @media (max-width: 991.98px) {
-  .rs-content__part table thead tr th,
-  .rs-content__part table thead tr td,
-  .rs-content__part table tbody tr th,
-  .rs-content__part table tbody tr td {
+  .rs-content table thead tr th,
+  .rs-content table thead tr td,
+  .rs-content table tbody tr th,
+  .rs-content table tbody tr td {
     font-size: 13px;
   }
 }
-.rs-content__part table thead tr th:last-child,
-.rs-content__part table thead tr td:last-child,
-.rs-content__part table tbody tr th:last-child,
-.rs-content__part table tbody tr td:last-child {
+.rs-content table thead tr th:last-child,
+.rs-content table thead tr td:last-child,
+.rs-content table tbody tr th:last-child,
+.rs-content table tbody tr td:last-child {
   font-weight: 600;
   border-right: 1px solid #ddd;
 }
-.table-4 .rs-content__part table thead tr th:last-child,
-.table-4 .rs-content__part table thead tr td:last-child,
-.table-4 .rs-content__part table tbody tr th:last-child,
-.table-4 .rs-content__part table tbody tr td:last-child {
+.table-4 .rs-content table thead tr th:last-child,
+.table-4 .rs-content table thead tr td:last-child,
+.table-4 .rs-content table tbody tr th:last-child,
+.table-4 .rs-content table tbody tr td:last-child {
   font-weight: 400;
 }
-.rs-content__part table thead tr:first-child th,
-.rs-content__part table thead tr:first-child td,
-.rs-content__part table tbody tr:first-child th,
-.rs-content__part table tbody tr:first-child td {
+.rs-content table thead tr:first-child th,
+.rs-content table thead tr:first-child td,
+.rs-content table tbody tr:first-child th,
+.rs-content table tbody tr:first-child td {
   border-top: 1px solid #ddd;
 }
 .rs-content__table h5 {

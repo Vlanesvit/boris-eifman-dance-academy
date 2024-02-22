@@ -281,6 +281,28 @@ addCursorHover(".rs-category__item", ".rs-category .cursor", "cursor__active");
 addCursorMove(".rs-category__item", ".rs-category .cursor__circle")
 addCursorHover(".rs-list-block__item", ".rs-list-block .cursor", "cursor__active");
 addCursorMove(".rs-list-block__item", ".rs-list-block .cursor__circle")
+addCursorHover(".rs-admin__other .rs-admin__item", ".rs-admin .cursor", "cursor__active");
+addCursorMove(".rs-admin__other .rs-admin__item", ".rs-admin .cursor__circle")
+
+function openNavigationMenu() {
+	const open = document.querySelector('.rs-content__navigation_btn');
+	const close = document.querySelector('.rs-content__navigation_close');
+
+	if (open) {
+		open.addEventListener('click', function () {
+			document.documentElement.classList.add("bgdark-on");
+			document.documentElement.classList.add("menu-navigation-open");
+		})
+	}
+
+	if (close) {
+		close.addEventListener('click', function () {
+			document.documentElement.classList.remove("bgdark-on");
+			document.documentElement.classList.remove("menu-navigation-open");
+		})
+	}
+}
+openNavigationMenu()
 
 /* ====================================
 Спойлеры/аккордионы

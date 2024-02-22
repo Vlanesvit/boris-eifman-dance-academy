@@ -8,3 +8,5 @@
 6. [Журналы](https://vlanesvit.github.io/boris-eifman-dance-academy/magazine.html)
 7. [Награды](https://vlanesvit.github.io/boris-eifman-dance-academy/awards.html)
 8. [Выпусники](https://vlanesvit.github.io/boris-eifman-dance-academy/graduate.html)
+9. [Управление Академиии танца](https://vlanesvit.github.io/boris-eifman-dance-academy/admin.html)
+10. [Матвеев Константин Сергеевич](https://vlanesvit.github.io/boris-eifman-dance-academy/admin-page.html)
