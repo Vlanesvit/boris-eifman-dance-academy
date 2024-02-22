@@ -254,8 +254,82 @@
   border-collapse: collapse;
   width: 100%;
 }
+.rs-content__part table.table-4 {
+  table-layout: auto;
+}
+.rs-content__part table.table-4 thead tr td,
+.rs-content__part table.table-4 thead tr th,
+.rs-content__part table.table-4 tbody tr td,
+.rs-content__part table.table-4 tbody tr th {
+  font-size: 18px;
+  line-height: 120%;
+}
+@media (max-width: 1439.98px) {
+  .rs-content__part table.table-4 thead tr td,
+  .rs-content__part table.table-4 thead tr th,
+  .rs-content__part table.table-4 tbody tr td,
+  .rs-content__part table.table-4 tbody tr th {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-content__part table.table-4 thead tr td,
+  .rs-content__part table.table-4 thead tr th,
+  .rs-content__part table.table-4 tbody tr td,
+  .rs-content__part table.table-4 tbody tr th {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-content__part table.table-4 thead tr td,
+  .rs-content__part table.table-4 thead tr th,
+  .rs-content__part table.table-4 tbody tr td,
+  .rs-content__part table.table-4 tbody tr th {
+    font-size: 13px;
+  }
+}
+.rs-content__part table.table-4 thead tr td:last-child,
+.rs-content__part table.table-4 thead tr th:last-child,
+.rs-content__part table.table-4 tbody tr td:last-child,
+.rs-content__part table.table-4 tbody tr th:last-child {
+  font-weight: 400;
+}
+@media (min-width: 1439.98px) {
+  .rs-content__part table.table-4 thead tr td:nth-child(1),
+  .rs-content__part table.table-4 thead tr th:nth-child(1),
+  .rs-content__part table.table-4 tbody tr td:nth-child(1),
+  .rs-content__part table.table-4 tbody tr th:nth-child(1) {
+    width: 209px;
+  }
+  .rs-content__part table.table-4 thead tr td:nth-child(2),
+  .rs-content__part table.table-4 thead tr th:nth-child(2),
+  .rs-content__part table.table-4 tbody tr td:nth-child(2),
+  .rs-content__part table.table-4 tbody tr th:nth-child(2) {
+    width: 297px;
+  }
+  .rs-content__part table.table-4 thead tr td:nth-child(3),
+  .rs-content__part table.table-4 thead tr th:nth-child(3),
+  .rs-content__part table.table-4 tbody tr td:nth-child(3),
+  .rs-content__part table.table-4 tbody tr th:nth-child(3) {
+    width: 370px;
+  }
+  .rs-content__part table.table-4 thead tr td:nth-child(4),
+  .rs-content__part table.table-4 thead tr th:nth-child(4),
+  .rs-content__part table.table-4 tbody tr td:nth-child(4),
+  .rs-content__part table.table-4 tbody tr th:nth-child(4) {
+    width: 297px;
+  }
+}
+@media (min-width: 1439.98px) {
+  .rs-content__part table.table-4 tbody tr td {
+    height: 332px;
+  }
+}
+.rs-content__part table thead tr th,
+.rs-content__part table thead tr td,
+.rs-content__part table tbody tr th,
 .rs-content__part table tbody tr td {
-  padding: 20px;
+  padding: 20px 19px;
   font-weight: 400;
   font-size: 20px;
   line-height: 160%;
@@ -264,35 +338,90 @@
   border-bottom: 1px solid #ddd;
   border-left: 1px solid #ddd;
   vertical-align: top;
+  text-align: left;
 }
 @media (max-width: 1699.98px) {
+  .rs-content__part table thead tr th,
+  .rs-content__part table thead tr td,
+  .rs-content__part table tbody tr th,
   .rs-content__part table tbody tr td {
     font-size: 18px;
   }
 }
 @media (max-width: 1439.98px) {
+  .rs-content__part table thead tr th,
+  .rs-content__part table thead tr td,
+  .rs-content__part table tbody tr th,
   .rs-content__part table tbody tr td {
     font-size: 16px;
     padding: 15px;
   }
 }
 @media (max-width: 1169.98px) {
+  .rs-content__part table thead tr th,
+  .rs-content__part table thead tr td,
+  .rs-content__part table tbody tr th,
   .rs-content__part table tbody tr td {
     font-size: 14px;
     padding: 10px;
   }
 }
 @media (max-width: 991.98px) {
+  .rs-content__part table thead tr th,
+  .rs-content__part table thead tr td,
+  .rs-content__part table tbody tr th,
   .rs-content__part table tbody tr td {
     font-size: 13px;
   }
 }
+.rs-content__part table thead tr th:last-child,
+.rs-content__part table thead tr td:last-child,
+.rs-content__part table tbody tr th:last-child,
 .rs-content__part table tbody tr td:last-child {
   font-weight: 600;
   border-right: 1px solid #ddd;
 }
+.table-4 .rs-content__part table thead tr th:last-child,
+.table-4 .rs-content__part table thead tr td:last-child,
+.table-4 .rs-content__part table tbody tr th:last-child,
+.table-4 .rs-content__part table tbody tr td:last-child {
+  font-weight: 400;
+}
+.rs-content__part table thead tr:first-child th,
+.rs-content__part table thead tr:first-child td,
+.rs-content__part table tbody tr:first-child th,
 .rs-content__part table tbody tr:first-child td {
   border-top: 1px solid #ddd;
+}
+.rs-content__table h5 {
+  font-weight: 400;
+  margin: 20px 0px 30px;
+}
+@media (max-width: 1699.98px) {
+  .rs-content__table h5 {
+    margin: 20px 0px 20px;
+  }
+}
+.rs-content__table_body {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .rs-content__table_body {
+    overflow: auto;
+    scrollbar-width: 4px;
+  }
+  .rs-content__table_body::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+}
+.rs-content__table table {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .rs-content__table table {
+    min-width: 800px;
+  }
 }
 .rs-content__links ul {
   display: -webkit-box;
@@ -758,4 +887,53 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.rs-content__anchors {
+  padding: 90px 90px 0px;
+  margin-bottom: -20px;
+}
+@media (max-width: 1699.98px) {
+  .rs-content__anchors {
+    padding: 50px;
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .rs-content__anchors {
+    padding: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-content__anchors {
+    padding: 20px 10px;
+  }
+}
+.rs-content__anchors ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -8.5px;
+}
+@media (max-width: 1439.98px) {
+  .rs-content__anchors ul {
+    margin: -5px;
+  }
+}
+.rs-content__anchors ul li {
+  padding: 8.5px;
+}
+@media (max-width: 1439.98px) {
+  .rs-content__anchors ul li {
+    padding: 5px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-content__anchors ul li {
+    width: 100%;
+  }
+  .rs-content__anchors ul li .rs-btn {
+    width: 100%;
+  }
 }

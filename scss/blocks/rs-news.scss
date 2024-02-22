@@ -1,8 +1,18 @@
 .rs-news {
-	padding-top: 90px;
+	padding-top: 60px;
 
 	@media (max-width: 991.98px) {
 		padding-top: 0px;
+	}
+
+	&.rs-news-page {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		@media (max-width: 1169.98px) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
 	}
 
 	// .rs-news__container
@@ -20,6 +30,106 @@
 
 		@media (max-width: 1169.98px) {
 			margin-bottom: 0px;
+		}
+
+		h1 {
+			font-family: "Jost", sans-serif;
+			font-weight: 200;
+			font-size: 60px;
+			line-height: 110%;
+
+			@media (max-width: 1439.98px) {
+				font-size: 45px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 35px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 20px;
+			}
+		}
+
+		.rs-news-page & {
+			margin: 0;
+			padding: 0;
+			border-bottom: 1px solid rgb(219, 219, 219);
+		}
+	}
+
+	// .rs-news__filter
+	&__filter {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 60px 0px 23px;
+
+		@media (max-width: 1439.98px) {
+			padding: 20px 0px 20px;
+		}
+
+		@media (max-width: 1169.98px) {
+			padding: 10px 0px 20px;
+		}
+
+		@media (max-width: 991.98px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	// .rs-news__filter-tag
+	&__filter-tag {
+		@media (max-width: 991.98px) {
+			width: 100%;
+		}
+
+		// .rs-news__filter-tag_list
+		&_list {
+			display: flex;
+			align-items: center;
+
+			@media (max-width: 991.98px) {
+				width: 100%;
+			}
+		}
+
+		// .rs-news__filter-tag_item
+		&_item {
+			&:not(:last-child) {
+				margin-right: 17px;
+
+				@media (max-width: 991.98px) {
+					margin-right: 10px;
+				}
+			}
+
+			@media (max-width: 991.98px) {
+				flex: 1 1 33.3333%;
+			}
+
+			.rs-btn {
+				padding: 14px 29px;
+
+				@media (max-width: 991.98px) {
+					padding: 10px 10px;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	// .rs-news__filter-sort
+	&__filter-sort {
+		width: 100%;
+		max-width: 180px;
+		position: relative;
+		z-index: 10;
+
+		@media (max-width: 991.98px) {
+			max-width: 100%;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -105,7 +215,7 @@
 			max-height: 330px;
 		}
 
-		@media (max-width: 1169.98px) {
+		@media (max-width: 991.98px) {
 			max-height: 250px;
 			min-width: 100%;
 		}
@@ -115,6 +225,14 @@
 			height: 100%;
 			object-fit: cover;
 			border-radius: 5px;
+
+			@media (max-width: 1169.98px) {
+				max-height: 330px;
+			}
+
+			@media (max-width: 991.98px) {
+				max-height: 250px;
+			}
 		}
 	}
 

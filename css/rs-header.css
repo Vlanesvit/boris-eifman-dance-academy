@@ -1,4 +1,5 @@
 header {
+  display: block;
   position: relative;
   z-index: 999;
 }
@@ -6,7 +7,7 @@ header {
 .rs-header {
   padding: 25px 0px;
   z-index: 999;
-  position: relative;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
@@ -50,7 +51,6 @@ header {
 .rs-header._header-scroll {
   background-color: #fff;
   color: rgb(0, 0, 0);
-  position: fixed;
 }
 .menu-open .rs-header {
   background-color: #fff;
@@ -1080,15 +1080,22 @@ header {
   width: 100%;
   z-index: 1000;
   position: relative;
+  height: 0;
+  -webkit-transition: height 0.3s ease 0s;
+  transition: height 0.3s ease 0s;
 }
 @media (min-width: 991.98px) {
   .rs-search {
     position: fixed;
     top: 0;
     left: 0;
+    overflow: hidden;
   }
 }
 @media (min-width: 991.98px) {
+  .search-open .rs-search {
+    height: 100vh;
+  }
   .search-open .rs-search .rs-search__block {
     -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);

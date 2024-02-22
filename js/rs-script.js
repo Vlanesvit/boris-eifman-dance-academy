@@ -279,6 +279,8 @@ const addCursorMove = (hoveredElement, selectedElement) => {
 }
 addCursorHover(".rs-category__item", ".rs-category .cursor", "cursor__active");
 addCursorMove(".rs-category__item", ".rs-category .cursor__circle")
+addCursorHover(".rs-list-block__item", ".rs-list-block .cursor", "cursor__active");
+addCursorMove(".rs-list-block__item", ".rs-list-block .cursor__circle")
 
 /* ====================================
 Спойлеры/аккордионы

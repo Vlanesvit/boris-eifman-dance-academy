@@ -30,7 +30,7 @@
 		<link rel="stylesheet" href="css/rs-header.css" />
 		<script src="js/rs-header.js" defer></script>
 		<header>
-			<div class="rs-header _header-transparent">
+			<div class="rs-header">
 				<div class="rs-header__container">
 					<div class="rs-header__wrapper">
 						<div class="rs-header__logo">
@@ -323,13 +323,51 @@
 		<main class="page">
 
 			<link rel="stylesheet" href="css/rs-news.css">
-			<section class="rs-news">
+			<section class="rs-news rs-news-page">
 				<div class="rs-news__container">
 					<div class="rs-news__wrapper">
 						<div class="rs-news__list">
 							<div class="rs-news__head">
-								<h2 data-aos="fade-up" data-aos-delay="100">Новости академии</h2>
+								<h1 data-aos="fade-up" data-aos-delay="100">Новости</h1>
+
+								<div class="rs-news__filter">
+									<div class="rs-news__filter-tag">
+										<ul class="rs-news__filter-tag_list">
+											<li class="rs-news__filter-tag_item">
+												<button class="rs-btn _btn-primary-border">Академия</button>
+											</li>
+											<li class="rs-news__filter-tag_item">
+												<button class="rs-btn _btn-primary-border">Выставки</button>
+											</li>
+											<li class="rs-news__filter-tag_item">
+												<button class="rs-btn _btn-primary-border">Мероприятия</button>
+											</li>
+										</ul>
+									</div>
+									<div class="rs-news__filter-sort">
+										<!-- Скрипт переделывает селекс в отдельный блок, см. rs-script.js
+										Если нужна дополнительно отправка формы после выбора, то добавь data-submit в select-->
+										<select name="form[]" class="custom-select" data-scroll data-show-selected
+											data-class-modif="one-select">
+											<option value="0" selected data-class="_select-selected">Год публикации
+											</option>
+											<option value="1">2023</option>
+											<option value="2">2022</option>
+											<option value="3">2021</option>
+											<option value="4">2020</option>
+											<option value="5">2023</option>
+											<option value="6">2022</option>
+											<option value="7">2021</option>
+											<option value="8">2020</option>
+											<option value="9">2023</option>
+											<option value="10">2022</option>
+											<option value="11">2021</option>
+											<option value="12">2020</option>
+										</select>
+									</div>
+								</div>
 							</div>
+
 							<div class="rs-news__list_body" data-aos="fade-right" data-aos-delay="100">
 								<div class="rs-news__block">
 									<a href="./news-page-photo.html">
@@ -438,60 +476,106 @@
 										</div>
 									</a>
 								</div>
+
+								<div class="rs-news__block">
+									<a href="./news-page-photo.html">
+										<div class="rs-news__item">
+											<div class="rs-news__img">
+												<img src="./img/blocks/news/news_1.jpg" alt="">
+											</div>
+											<div class="rs-news__desc">
+												<div class="rs-news__desc_list">
+													<ul>
+														<li>Академия</li>
+														<li>Выставки</li>
+														<li>Мероприятия</li>
+													</ul>
+													<div class="rs-news__desc_data">05/10/2023</div>
+												</div>
+												<h4>Академия танца Бориса Эйфмана готовится к Международной
+													выставке-форуму «Россия» на ВДНХ</h4>
+												<p>В мультимедийном центре Библиотеки имени Маяковского 11
+													октября 2023
+													года состоялся круглый стол, посвященный достижениям в
+													культурной
+													сфере
+													Санкт-Петербурга.</p>
+											</div>
+										</div>
+										<div class="rs-news__footer">
+											<div class="rs-news__arrow rs-btn-arrow">
+												<svg viewBox="0 0 20 12" fill="none">
+													<path
+														d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+														fill="rgb(11, 113, 173)" />
+												</svg>
+											</div>
+										</div>
+									</a>
+								</div>
+
+								<div class="rs-news__block">
+									<a href="./news-page-photo.html">
+										<div class="rs-news__item">
+											<div class="rs-news__img">
+												<img src="./img/blocks/news/news_2.jpg" alt="">
+											</div>
+											<div class="rs-news__desc">
+												<div class="rs-news__desc_list">
+													<ul>
+														<li>Академия</li>
+														<li>Выставки</li>
+														<li>Мероприятия</li>
+													</ul>
+													<div class="rs-news__desc_data">05/10/2023</div>
+												</div>
+												<h4>С Днем учителя!</h4>
+												<p>У каждого из нас есть в жизни свой Учитель - тот, кто
+													наделил
+													знаниями,
+													был мудр и обладал удивительной душевной щедростью.</p>
+											</div>
+										</div>
+										<div class="rs-news__footer">
+											<div class="rs-news__arrow rs-btn-arrow">
+												<svg viewBox="0 0 20 12" fill="none">
+													<path
+														d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
+														fill="rgb(11, 113, 173)" />
+												</svg>
+											</div>
+										</div>
+									</a>
+								</div>
 							</div>
-						</div>
 
-						<div class="rs-news__promo" data-aos="fade-left" data-aos-delay="300">
-							<div class="rs-news__promo_body">
-								<div class="rs-news__block">
-									<a href="./news-page-photo.html">
-										<div class="rs-news__item">
-											<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-												<img src="./img/blocks/news/banner_1.1.jpg" alt="">
-											</div>
-											<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-												<h4>Балетный интенсив для учащихся
-													2-4 классов начальной школы</h4>
-												<p>В дни осенних каникул с 1 по 3 ноября 2023 года
-													в Академии танца Бориса Эйфмана пройдет...</p>
-											</div>
-										</div>
-										<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-											<div class="rs-news__arrow rs-btn-arrow">
-												<svg viewBox="0 0 20 12" fill="none">
-													<path
-														d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-														fill="rgb(11, 113, 173)" />
-												</svg>
-											</div>
-										</div>
-									</a>
-								</div>
-
-								<div class="rs-news__block">
-									<a href="./news-page-photo.html">
-										<div class="rs-news__item">
-											<div class="rs-news__img" data-reveal-anim data-reveal-anim-left data-aos>
-												<img src="./img/blocks/news/banner_1.2.jpg" alt="">
-											</div>
-											<div class="rs-news__desc" data-aos="fade-right" data-aos-delay="100">
-												<h4>Дополнительный набор
-													на бесплатное обучение</h4>
-												<p>Проводим дополнительный набор на бесплатное обучение юношей и девушек
-													старше 15 лет...</p>
-											</div>
-										</div>
-										<div class="rs-news__footer" data-aos="fade-right" data-aos-delay="150">
-											<div class="rs-news__arrow rs-btn-arrow">
-												<svg viewBox="0 0 20 12" fill="none">
-													<path
-														d="M20 6L15 3.11325L15 8.88675L20 6ZM-2.18526e-09 6.5L15.5 6.5L15.5 5.5L2.18588e-09 5.5L-2.18526e-09 6.5Z"
-														fill="rgb(11, 113, 173)" />
-												</svg>
-											</div>
-										</div>
-									</a>
-								</div>
+							<div class="pagging">
+								<button disabled type="button" class="pagging__arrow pagging__arrow_back">
+									Назад
+								</button>
+								<ul class="pagging__list">
+									<li class="pagging__item">
+										<a href="#" class="pagging__link _active">1</a>
+									</li>
+									<li class="pagging__item">
+										<a href="#" class="pagging__link">2</a>
+									</li>
+									<li class="pagging__item">
+										<a href="#" class="pagging__link">3</a>
+									</li>
+									<li class="pagging__item">
+										<a href="#" class="pagging__link">4</a>
+									</li>
+									<li class="pagging__item">
+										<a href="#" class="pagging__link">5</a>
+									</li>
+									<li class="pagging__item">
+										<a href="#" class="pagging__link">6</a>
+									</li>
+								</ul>
+								<button type="button" class="pagging__arrow pagging__arrow_go">
+									Вперед
+								</button>
 							</div>
 						</div>
 					</div>
@@ -629,8 +713,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
-	<script>SmoothScroll({ animationTime: 800, stepSize: 100, accelerationDelta: 50, accelerationMax: 3, touchpadSupport: false, });</script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>AOS.init({ duration: 500, easing: "ease-out-quart", once: true });</script>
 

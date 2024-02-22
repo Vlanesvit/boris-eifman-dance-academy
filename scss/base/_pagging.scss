@@ -2,15 +2,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	margin-top: 40px;
+	margin-top: 60px;
+
+	@media (max-width: 1439.98px) {
+		margin-top: 40px;
+	}
 
 	@media (max-width: 991.98px) {
 		justify-content: center;
-		margin-top: 20px;
-	}
-
-	&.search-pagging {
-		justify-content: flex-start;
 		margin-top: 20px;
 	}
 
@@ -21,100 +20,62 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		min-width: 33px;
-		min-height: 33px;
-		max-width: 33px;
-		max-height: 33px;
-		border-radius: 5px;
-		border: 1.191px solid #d2e3f0;
-		background-color: #fff;
-		color: #0c75af;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 160%;
+		letter-spacing: 0.03em;
+		color: #3c3c3c;
 
-		@media (max-width: 439.98px) {
-			min-width: 30px;
-			min-height: 30px;
-			max-width: 30px;
-			max-height: 30px;
+		@media (max-width: 1439.98px) {
+			font-size: 14px;
 		}
 
-		svg {
-			path {
-				transition: fill 0.3s ease 0s;
-			}
+		@media (max-width: 991.98px) {
+			font-size: 13px;
 		}
 
-		&.pagging__arrow_start,
-		&.pagging__arrow_end {
-			@media (max-width: 374.98px) {
-				display: none;
-			}
-		}
-
-		&.pagging__arrow_left,
-		&.pagging__arrow_start {
-			margin-right: 6px;
-		}
-
-		&.pagging__arrow_right,
-		&.pagging__arrow_end {
-			margin-left: 6px;
-		}
-
-		.search-pagging & {
-			min-width: unset;
-			min-height: unset;
-			max-width: unset;
-			max-height: unset;
-			border: none;
-
-			&::before {
-				display: none;
-			}
-
-			&.pagging__arrow_left,
-			&.pagging__arrow_start {
-				margin-right: 10px;
-			}
-
-			&.pagging__arrow_right,
-			&.pagging__arrow_end {
-				margin-left: 10px;
-			}
-
-			&.pagging__arrow_start,
-			&.pagging__arrow_end {
-				color: #0c75af;
-				text-decoration-line: underline;
-			}
-
-			&.pagging__arrow_left,
-			&.pagging__arrow_right {
-				color: #415674;
-			}
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: #0c75af;
-					background-color: #fff;
-				}
-			}
+		&:disabled {
+			color: #898989;
+			pointer-events: none;
+			cursor: default;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: #0c75af;
-				border-color: #0c75af;
-
-				svg {
-					path {
-						fill: #fff;
-					}
-				}
+				color: #0c75af;
 			}
 		}
 
-		&:disabled {
-			display: none;
+		&.pagging__arrow_back {
+			margin-right: 23px;
+
+			@media (max-width: 1439.98px) {
+				margin-right: 15px;
+			}
+
+			@media (max-width: 991.98px) {
+				margin-right: 10px;
+			}
+
+			@media (max-width: 767.98px) {
+				display: none;
+			}
+		}
+
+		&.pagging__arrow_go {
+			margin-left: 23px;
+
+			@media (max-width: 1439.98px) {
+				margin-left: 15px;
+			}
+
+			@media (max-width: 991.98px) {
+				margin-left: 10px;
+			}
+
+			@media (max-width: 767.98px) {
+				display: none;
+			}
 		}
 	}
 
@@ -127,55 +88,55 @@
 	// .pagging__item
 	&__item {
 		&:not(:last-child) {
-			margin-right: 4.5px;
+			margin-right: 15px;
+
+			@media (max-width: 991.98px) {
+				margin-right: 5px;
+			}
 		}
 	}
 
 	// .pagging__link
-	&__link,
-	&__more {
+	&__link {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		transition: all 0.3s ease 0s;
 		text-align: center;
-		min-width: 33px;
-		min-height: 33px;
-		max-width: 33px;
-		max-height: 33px;
-		font-size: 14px;
-		font-style: normal;
+		min-width: 48px;
+		min-height: 48px;
+		max-width: 48px;
+		max-height: 48px;
+		border-radius: 50%;
+		border: 1px solid transparent;
 		font-weight: 400;
-		line-height: normal;
-		border-radius: 5px;
-		border: 1.191px solid #d2e3f0;
-		background-color: #fff;
+		font-size: 16px;
+		line-height: 160%;
+		letter-spacing: 0.03em;
+		color: #3c3c3c;
 
-		@media (max-width: 439.98px) {
-			min-width: 30px;
-			min-height: 30px;
-			max-width: 30px;
-			max-height: 30px;
+		@media (max-width: 1439.98px) {
+			font-size: 14px;
+		}
+
+		@media (max-width: 991.98px) {
+			min-width: 35px;
+			min-height: 35px;
+			max-width: 35px;
+			max-height: 35px;
+			font-size: 13px;
 		}
 	}
 
 	&__link {
 		&._active {
-			color: #fff;
-			background-color: #0c75af;
-			border-color: #0c75af;
+			border-color: #dbdbdb;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: #fff;
-				background-color: #0c75af;
-				border-color: #0c75af;
+				border-color: #dbdbdb;
 			}
 		}
-	}
-
-	&__more {
-		border: none;
 	}
 }

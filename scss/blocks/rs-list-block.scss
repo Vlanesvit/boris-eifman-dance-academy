@@ -1,0 +1,275 @@
+.rs-list-block {
+	padding: 60px 0 90px;
+
+	@media (max-width: 1169.98px) {
+		padding: 50px 0px;
+	}
+
+	@media (max-width: 991.98px) {
+		padding: 30px 0px;
+	}
+
+	&.rs-awards {
+		padding-bottom: 30px;
+	}
+
+	// .rs-list-block__container
+	&__container {
+		& > h1 {
+			text-align: center;
+			font-family: "Jost", sans-serif;
+			font-weight: 200;
+			font-size: 60px;
+			line-height: 110%;
+
+			@media (max-width: 1439.98px) {
+				font-size: 45px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 35px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 20px;
+			}
+		}
+	}
+
+	// .rs-list-block__wrapper
+	&__wrapper {
+		margin-top: 60px;
+
+		@media (max-width: 1169.98px) {
+			margin-top: 30px;
+		}
+
+		@media (max-width: 991.98px) {
+			margin-top: 20px;
+		}
+	}
+
+	// .rs-list-block__list
+	&__list {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: -15px;
+
+		@media (max-width: 1169.98px) {
+			margin: -10px;
+		}
+
+		.rs-awards & {
+			margin: 0;
+			align-items: unset;
+		}
+	}
+
+	// .rs-list-block__item
+	&__item {
+		flex: 0 0 25%;
+		max-width: 360px;
+		padding: 15px;
+
+		.rs-awards & {
+			max-width: 100%;
+			padding: 0;
+			border: 1px solid #dbdbdb;
+		}
+
+		@media (max-width: 1169.98px) {
+			flex: 0 0 50%;
+			padding: 10px;
+			max-width: 100%;
+		}
+
+		@media (max-width: 539.98px) {
+			flex: 0 0 100%;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.rs-list-block__img {
+					&::after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	// .rs-list-block__link
+	&__link {
+		.rs-awards & {
+			padding: 30px 20px 35px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-align: center;
+
+			@media (max-width: 1439.98px) {
+				padding: 30px 20px;
+			}
+		}
+	}
+
+	// .rs-list-block__img
+	&__img {
+		margin-bottom: 30px;
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		@media (max-width: 1169.98px) {
+			margin-bottom: 15px;
+		}
+
+		.rs-awards & {
+			max-height: 340px;
+			max-width: 228.31px;
+			margin: 52px auto 0px;
+
+			@media (max-width: 1439.98px) {
+				margin-top: 30px;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			backdrop-filter: blur(4.800000190734863px);
+			background: rgba(0, 0, 0, 0.5);
+			opacity: 0;
+			transition: all 0.3s ease 0s;
+
+			.rs-awards & {
+				display: none;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			max-height: 512px;
+
+			.rs-awards & {
+				max-height: 340px;
+			}
+		}
+	}
+
+	// .rs-list-block__desc
+	&__desc {
+		p {
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 120%;
+			letter-spacing: 0.03em;
+			color: #3c3c3c;
+			margin-top: 20px;
+
+			@media (max-width: 1699.98px) {
+				font-size: 18px;
+			}
+
+			@media (max-width: 1439.98px) {
+				font-size: 16px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 14px;
+				margin-top: 10px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 13px;
+			}
+
+			.rs-awards & {
+				font-size: 16px;
+				margin: 0 0 5px;
+
+				@media (max-width: 1439.98px) {
+					font-size: 13px;
+				}
+			}
+		}
+
+		h5 {
+			font-family: "Jost", sans-serif;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 110%;
+			text-align: center;
+			color: #000;
+			letter-spacing: 0px;
+
+			@media (max-width: 1439.98px) {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.cursor {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 99999;
+		display: block;
+		pointer-events: none;
+
+		@media (max-width: 991.98px) {
+			display: none;
+		}
+
+		&__point-zero {
+			position: relative;
+		}
+
+		&__circle {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition:
+				transform 0s linear 0s,
+				opacity 0.3s cubic-bezier(0.339, -0.18, 0.228, 1.656);
+		}
+
+		&__text {
+			transform: scale(0);
+			padding: 10px 15px;
+			border: 1px solid rgb(255, 255, 255);
+			border-radius: 45px;
+			transition: transform 0.3s ease-in-out;
+
+			span {
+				color: rgb(255, 255, 255);
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 19px;
+				letter-spacing: 0.3px;
+				margin-right: 10px;
+			}
+		}
+
+		&.cursor__active .cursor__circle {
+			opacity: 1;
+		}
+		&.cursor__active .cursor__text {
+			transform: scale(1);
+		}
+	}
+}
+.rs-photo-gallery {
+}

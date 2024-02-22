@@ -215,6 +215,7 @@ Header при скролле
 ==================================== */
 function headerFixed() {
 	const header = document.querySelector('.rs-header');
+	const headerTag = document.querySelector('header');
 	let lastScrollTop = 0;
 
 	function headerClassAdd() {
@@ -241,9 +242,17 @@ function headerFixed() {
 	})
 	window.addEventListener('load', function () {
 		headerClassAdd()
+
+		if (!header.classList.contains('_header-transparent')) {
+			headerTag.style.height = header.clientHeight + 'px';
+		}
 	})
 	window.addEventListener('resize', function () {
 		headerClassAdd()
+
+		if (!header.classList.contains('_header-transparent')) {
+			headerTag.style.height = header.clientHeight + 'px';
+		}
 	})
 }
 headerFixed()
