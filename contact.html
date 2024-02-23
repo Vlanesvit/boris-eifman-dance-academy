@@ -442,7 +442,8 @@
 							<div class="rs-content__part rs-content__anchor" id="part3">
 								<h4>Электронное обращение</h4>
 								<p>Вы можете направить свои вопросы через электронную форму обращения.</p>
-								<a href="#" class="rs-btn _btn-primary">Форма электронного обращения</a>
+								<a href="#" class="rs-btn _btn-primary" data-popup="#form">Форма электронного
+									обращения</a>
 							</div>
 
 							<div class="rs-content__part rs-content__anchor" id="part4">
@@ -620,6 +621,69 @@
 				</div>
 			</div>
 		</footer>
+
+
+		<div id="form" class="popup popup-form">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="0.640625" y="27.6982" width="37.5653" height="2" rx="1"
+								transform="rotate(-45 0.640625 27.6982)" fill="#DBDBDB" />
+							<rect x="2.79297" y="1.88721" width="37.5653" height="2" rx="1"
+								transform="rotate(45 2.79297 1.88721)" fill="#DBDBDB" />
+						</svg>
+					</button>
+
+					<div class="popup__text">
+						<h2>Свяжитесь с нами</h2>
+						<h5>Вы можете задать любые интересующие вопросы.</h5>
+
+						<div class="popup__form">
+							<form action="#" class="form">
+								<div class="form__wrapper">
+									<div class="form__block">
+										<div class="form__line">
+											<label class="rs-input-label">Фамилия Имя Отчество</label>
+											<input autocomplete="off" type="text" name="form[]"
+												data-error="Обязательное поле" data-validate data-required required
+												placeholder="Иванов Иван Иванович" class="rs-input">
+										</div>
+										<div class="form__line">
+											<label class="rs-input-label">Телефон</label>
+											<input autocomplete="off" type="tel" name="form[]"
+												data-error="Обязательное поле" data-validate data-required required
+												placeholder="7 *** *** ** **" class="rs-input">
+										</div>
+										<div class="form__line">
+											<label class="rs-input-label">E-mail</label>
+											<input autocomplete="off" type="email" name="form[]"
+												data-error="Обязательное поле" data-validate data-required="email"
+												required placeholder="example@mail.ru" class="rs-input">
+										</div>
+										<div class="form__line">
+											<label class="rs-input-label">Ваше сообщение или вопрос</label>
+											<textarea autocomplete="off" name="form[]" placeholder=""
+												class="rs-input"></textarea>
+										</div>
+									</div>
+
+									<div class="form__agreement">Нажимая кнопку «Отправить заявку» вы соглашаетесь с
+										<a href="#">политикой конфиденциальности</a> и даете согласие на
+										<a href="#">обработку персональных данных</a>
+									</div>
+
+									<div class="form__button">
+										<button type="submit" class="rs-btn _btn-primary">Отправить заявку</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 	</div>
 

@@ -16,6 +16,5 @@
 14. [Отдельная новость (если нет фото)](https://vlanesvit.github.io/boris-eifman-dance-academy/news-page-text.html)
 15. [Результаты поиска](https://vlanesvit.github.io/boris-eifman-dance-academy/search.html)
 16. [Фома ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/form.html)
-17. [Модальная Форма ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/home.html#feedback)
+17. [Модальная Форма ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/contact.html#form)
 18. [404](https://vlanesvit.github.io/boris-eifman-dance-academy/404.html)
-19. [Шаблон](https://vlanesvit.github.io/boris-eifman-dance-academy/template.html)

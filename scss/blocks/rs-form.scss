@@ -1,0 +1,68 @@
+.rs-form {
+	padding: 100px 0px;
+
+	@media (max-width: 1439.98px) {
+		padding: 70px 0px;
+	}
+
+	@media (max-width: 1169.98px) {
+		padding: 50px 0px;
+	}
+
+	@media (max-width: 991.98px) {
+		padding: 30px 0px;
+	}
+
+	// .rs-form__container
+	&__container {
+	}
+
+	// .rs-form__wrapper
+	&__wrapper {
+		max-width: 1170px;
+		margin: 0 auto;
+
+		h4 {
+			color: #0c75af;
+			margin-bottom: 13px;
+			text-align: center;
+		}
+
+		h1 {
+			font-family: "Jost", sans-serif;
+			font-weight: 200;
+			font-size: 60px;
+			line-height: 110%;
+			text-align: center;
+
+			@media (max-width: 1439.98px) {
+				font-size: 45px;
+			}
+
+			@media (max-width: 1169.98px) {
+				font-size: 35px;
+			}
+
+			@media (max-width: 991.98px) {
+				font-size: 20px;
+			}
+		}
+	}
+
+	// .rs-form__block
+	&__block {
+		margin-top: 86px;
+
+		@media (max-width: 1439.98px) {
+			margin-top: 70px;
+		}
+
+		@media (max-width: 1169.98px) {
+			margin-top: 50px;
+		}
+
+		@media (max-width: 991.98px) {
+			margin-top: 30px;
+		}
+	}
+}

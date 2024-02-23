@@ -1,0 +1,224 @@
+.rs-article__head {
+  padding: 60px 0px;
+}
+@media (max-width: 1439.98px) {
+  .rs-article__head {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-article__head {
+    padding: 30px 0px 10px;
+  }
+}
+.rs-article__head h1 {
+  font-family: "Jost", sans-serif;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 110%;
+  text-align: center;
+}
+@media (max-width: 1439.98px) {
+  .rs-article__head h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-article__head h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-article__head h1 {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+@media (min-width: 991.98px) {
+  .rs-article__content {
+    border-top: 1px solid #dbdbdb;
+  }
+}
+.rs-article__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 991.98px) {
+  .rs-article__wrapper {
+    border-left: 1px solid #dbdbdb;
+  }
+}
+.rs-article__block {
+  max-width: 1320px;
+}
+@media (max-width: 991.98px) {
+  .rs-article__block {
+    max-width: 100%;
+  }
+}
+.rs-article__body {
+  padding: 60px;
+}
+@media (max-width: 1439.98px) {
+  .rs-article__body {
+    padding: 50px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-article__body {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-article__body {
+    padding: 20px 0px;
+  }
+}
+.rs-article__body > *:first-child {
+  margin-top: 0px !important;
+}
+.rs-article__body > *:last-child {
+  margin-bottom: 0px !important;
+}
+.rs-article__body p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+  color: #3c3c3c;
+  margin: 10px 0px;
+}
+@media (max-width: 1699.98px) {
+  .rs-article__body p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .rs-article__body p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-article__body p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-article__body p {
+    font-size: 13px;
+  }
+}
+.rs-article__body img {
+  margin: 25px 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1169.98px) {
+  .rs-article__body img {
+    margin: 15px 0px;
+  }
+}
+.rs-article__footer {
+  border-top: 1px solid #dbdbdb;
+  padding: 60px 60px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 1439.98px) {
+  .rs-article__footer {
+    padding: 50px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-article__footer {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-article__footer {
+    padding: 20px 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+.rs-article__footer_action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.rs-article__footer_action .rs-btn {
+  margin-right: 20px;
+}
+@media (max-width: 991.98px) {
+  .rs-article__footer_action .rs-btn {
+    margin-right: 10px;
+  }
+}
+.rs-article__footer_action .ya-share2__link_more .ya-share2__icon {
+  height: 46px;
+  width: 46px;
+}
+@media (max-width: 991.98px) {
+  .rs-article__footer_action .ya-share2__link_more .ya-share2__icon {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media (max-width: 767.98px) {
+  .rs-article__footer_date {
+    margin-top: 10px;
+  }
+}
+.rs-article__footer_date h5 {
+  color: #0c75af;
+}
+.rs-article__line {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  margin-right: -65px;
+}
+@media (max-width: 1810.98px) {
+  .rs-article__line {
+    margin-right: -20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-article__line {
+    display: none;
+  }
+}
+.rs-article__line img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

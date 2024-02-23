@@ -81,6 +81,10 @@ body {
 	@media (max-width: 767.98px) {
 		max-width: 100%;
 	}
+
+	[class*="__container"] {
+		padding: 0;
+	}
 }
 
 // Вспомогательные классы ======================================================================================================================================================================================================================
@@ -100,7 +104,7 @@ body {
 @import "./base/_common";
 @import "./base/_swiper";
 @import "./base/_breadcrumbs";
-// @import "./base/_modal";
+@import "./base/_modal";
 // @import "./base/_datepicker";
 // @import "./base/_light-gallery";
 // @import "./base/_spollers";
