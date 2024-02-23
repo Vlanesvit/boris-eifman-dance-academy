@@ -574,6 +574,20 @@ p {
     color: #0c75af;
   }
 }
+.rs-btn._btn-white {
+  color: #0c75af;
+  background: #fff;
+  border: 1px solid #fff;
+}
+.rs-btn._btn-white::before {
+  background-color: #0c75af;
+}
+@media (any-hover: hover) {
+  .rs-btn._btn-white:hover {
+    color: #fff;
+    border-color: #0c75af;
+  }
+}
 .rs-btn._btn-primary-border {
   border: 1px solid #0c75af;
   background-color: transparent;
@@ -1158,7 +1172,7 @@ textarea.rs-input {
 
 body::after {
   content: "";
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   width: 100%;
   height: 100%;
