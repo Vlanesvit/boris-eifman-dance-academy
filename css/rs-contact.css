@@ -1,0 +1,273 @@
+.rs-contact {
+  padding-top: 70px;
+  padding-bottom: 110px;
+}
+@media (max-width: 1439.98px) {
+  .rs-contact {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-contact {
+    padding: 30px 0px;
+  }
+}
+.rs-contact._contact-page {
+  padding: 0;
+}
+.rs-contact__head {
+  padding: 60px 0px;
+}
+@media (max-width: 1439.98px) {
+  .rs-contact__head {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-contact__head {
+    padding: 30px 0px 10px;
+  }
+}
+.rs-contact__head h1 {
+  font-family: "Jost", sans-serif;
+  font-weight: 200;
+  font-size: 60px;
+  line-height: 110%;
+  text-align: center;
+}
+@media (max-width: 1439.98px) {
+  .rs-contact__head h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-contact__head h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-contact__head h1 {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+._contact-page .rs-contact__content {
+  padding: 110px 0px 90px;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  border-top: 1px solid rgb(219, 219, 219);
+}
+@media (max-width: 1439.98px) {
+  ._contact-page .rs-contact__content {
+    padding: 50px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  ._contact-page .rs-contact__content {
+    padding: 0px 0px;
+    border-top: none;
+  }
+}
+@media (min-width: 991.98px) {
+  .rs-contact__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.rs-contact__info {
+  width: 100%;
+  max-width: 350px;
+}
+@media (max-width: 1439.98px) {
+  .rs-contact__info {
+    max-width: 300px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-contact__info {
+    max-width: 100%;
+  }
+}
+.rs-contact__info h2 {
+  margin-bottom: 30px;
+}
+@media (max-width: 1169.98px) {
+  .rs-contact__info h2 {
+    margin-bottom: 20px;
+  }
+}
+.rs-contact__info ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media (max-width: 1169.98px) {
+  .rs-contact__info ul li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.rs-contact__info ul li h5 {
+  font-weight: 600;
+}
+.rs-contact__info ul li p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+  color: #3c3c3c;
+}
+@media (max-width: 1699.98px) {
+  .rs-contact__info ul li p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .rs-contact__info ul li p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-contact__info ul li p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-contact__info ul li p {
+    font-size: 13px;
+  }
+}
+.rs-contact__block {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 1277px;
+  margin-left: 30px;
+}
+@media (max-width: 991.98px) {
+  .rs-contact__block {
+    max-width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+.rs-contact__block .map {
+  width: 100%;
+  height: 337px;
+}
+@media (max-width: 991.98px) {
+  .rs-contact__block .map {
+    height: 250px;
+  }
+}
+.rs-contact__block_body {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .rs-contact__block_body {
+    overflow: auto;
+    scrollbar-width: 4px;
+  }
+  .rs-contact__block_body::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+  }
+}
+.rs-contact__block table {
+  table-layout: auto;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .rs-contact__block table {
+    min-width: 700px;
+  }
+}
+.rs-contact__block table thead tr th,
+.rs-contact__block table thead tr td,
+.rs-contact__block table tbody tr th,
+.rs-contact__block table tbody tr td {
+  padding: 20px 19px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.03em;
+  color: #3c3c3c;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  vertical-align: top;
+  text-align: left;
+}
+@media (max-width: 1699.98px) {
+  .rs-contact__block table thead tr th,
+  .rs-contact__block table thead tr td,
+  .rs-contact__block table tbody tr th,
+  .rs-contact__block table tbody tr td {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1439.98px) {
+  .rs-contact__block table thead tr th,
+  .rs-contact__block table thead tr td,
+  .rs-contact__block table tbody tr th,
+  .rs-contact__block table tbody tr td {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+@media (max-width: 1169.98px) {
+  .rs-contact__block table thead tr th,
+  .rs-contact__block table thead tr td,
+  .rs-contact__block table tbody tr th,
+  .rs-contact__block table tbody tr td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-contact__block table thead tr th,
+  .rs-contact__block table thead tr td,
+  .rs-contact__block table tbody tr th,
+  .rs-contact__block table tbody tr td {
+    font-size: 13px;
+  }
+}
+.rs-contact__block table thead tr th:last-child,
+.rs-contact__block table thead tr td:last-child,
+.rs-contact__block table tbody tr th:last-child,
+.rs-contact__block table tbody tr td:last-child {
+  font-weight: 600;
+  border-right: 1px solid #ddd;
+}
+.table-4 .rs-contact__block table thead tr th:last-child,
+.table-4 .rs-contact__block table thead tr td:last-child,
+.table-4 .rs-contact__block table tbody tr th:last-child,
+.table-4 .rs-contact__block table tbody tr td:last-child {
+  font-weight: 400;
+}
+.rs-contact__block table thead tr th strong,
+.rs-contact__block table thead tr td strong,
+.rs-contact__block table tbody tr th strong,
+.rs-contact__block table tbody tr td strong {
+  color: #0c75af;
+  font-weight: 600;
+}
+.rs-contact__block table thead tr th a,
+.rs-contact__block table thead tr td a,
+.rs-contact__block table tbody tr th a,
+.rs-contact__block table tbody tr td a {
+  display: block;
+}
+.rs-contact__block table thead tr th a:not(:last-child),
+.rs-contact__block table thead tr td a:not(:last-child),
+.rs-contact__block table tbody tr th a:not(:last-child),
+.rs-contact__block table tbody tr td a:not(:last-child) {
+  margin-bottom: 10px;
+}
+.rs-contact__block table thead tr:first-child th,
+.rs-contact__block table thead tr:first-child td,
+.rs-contact__block table tbody tr:first-child th,
+.rs-contact__block table tbody tr:first-child td {
+  border-top: 1px solid #ddd;
+}

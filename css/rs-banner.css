@@ -16,6 +16,41 @@
     max-height: 530px;
   }
 }
+.rs-banner._block-banner {
+  background-color: #fff;
+  max-height: 100%;
+  height: auto;
+}
+.rs-banner._block-banner .rs-banner__block {
+  height: 100vh;
+  max-height: 645px;
+}
+@media (max-width: 991.98px) {
+  .rs-banner._block-banner .rs-banner__block {
+    max-height: 100%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-banner._block-banner > .rs-banner__container {
+    display: none;
+  }
+}
+.rs-banner._block-banner > .rs-banner__container > h2 {
+  margin-bottom: 40px;
+}
+@media (max-width: 1439.98px) {
+  .rs-banner._block-banner > .rs-banner__container > h2 {
+    margin-bottom: 20px;
+  }
+}
 .rs-banner__block {
   height: 100%;
   width: 100%;
@@ -28,6 +63,12 @@
   width: 100%;
   height: 100%;
 }
+@media (max-width: 991.98px) {
+  ._block-banner .rs-banner__bg {
+    height: 225px;
+    position: relative;
+  }
+}
 .rs-banner__bg::after {
   content: "";
   position: absolute;
@@ -39,6 +80,9 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.74) 7.315%, rgba(0, 0, 0, 0.55) 24.795%, rgba(0, 0, 0, 0.41) 100%);
 }
 ._small-banner .rs-banner__bg::after {
+  display: none;
+}
+._inner-banner .rs-banner__bg::after {
   display: none;
 }
 .rs-banner__bg iframe,
@@ -100,6 +144,11 @@
     padding: 30px 0px;
   }
 }
+@media (max-width: 991.98px) {
+  ._block-banner .rs-banner__content {
+    padding: 0px 0px 21px;
+  }
+}
 .rs-banner__wrapper {
   position: relative;
   width: 100%;
@@ -119,6 +168,11 @@
 }
 ._small-banner .rs-banner__wrapper {
   padding: 0px;
+}
+@media (max-width: 991.98px) {
+  ._block-banner .rs-banner__wrapper {
+    color: #000000;
+  }
 }
 .rs-banner__scroll-down {
   position: absolute;
@@ -170,6 +224,15 @@
 @media (max-width: 991.98px) {
   .rs-banner__body h6 {
     margin-top: 5px;
+  }
+}
+.rs-banner__body h5 {
+  color: #fff;
+  margin-top: 14px;
+}
+@media (max-width: 991.98px) {
+  ._block-banner .rs-banner__body h5 {
+    color: #000000;
   }
 }
 ._small-banner .rs-banner__body h1 {

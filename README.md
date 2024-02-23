@@ -1,6 +1,6 @@
 # boris-eifman-dance-academy
 
-1. [Главная](https://vlanesvit.github.io/boris-eifman-dance-academy/index.html)
+1. [Главная](https://vlanesvit.github.io/boris-eifman-dance-academy/home.html)
 2. [Новости академии](https://vlanesvit.github.io/boris-eifman-dance-academy/news.html)
 3. [Поступление](https://vlanesvit.github.io/boris-eifman-dance-academy/entrance.html)
 4. [История развития](https://vlanesvit.github.io/boris-eifman-dance-academy/history.html)
@@ -10,3 +10,12 @@
 8. [Выпусники](https://vlanesvit.github.io/boris-eifman-dance-academy/graduate.html)
 9. [Управление Академиии танца](https://vlanesvit.github.io/boris-eifman-dance-academy/admin.html)
 10. [Матвеев Константин Сергеевич](https://vlanesvit.github.io/boris-eifman-dance-academy/admin-page.html)
+11. [Театр Академии танца](https://vlanesvit.github.io/boris-eifman-dance-academy/theater-page.html)
+12. [Контакты](https://vlanesvit.github.io/boris-eifman-dance-academy/contact.html)
+13. [Отдельная новость (если есть фото)](https://vlanesvit.github.io/boris-eifman-dance-academy/news-page-photo.html)
+14. [Отдельная новость (если нет фото)](https://vlanesvit.github.io/boris-eifman-dance-academy/news-page-text.html)
+15. [Результаты поиска](https://vlanesvit.github.io/boris-eifman-dance-academy/search.html)
+16. [Фома ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/form.html)
+17. [Модальная Форма ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/home.html#feedback)
+18. [404](https://vlanesvit.github.io/boris-eifman-dance-academy/404.html)
+19. [Шаблон](https://vlanesvit.github.io/boris-eifman-dance-academy/template.html)

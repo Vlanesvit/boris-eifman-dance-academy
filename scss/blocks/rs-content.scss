@@ -1,4 +1,8 @@
 .rs-content {
+	&.rs-admin {
+		border: none;
+	}
+
 	// .rs-content__container
 	&__container {
 	}
@@ -476,6 +480,19 @@
 
 							&:nth-child(4) {
 								width: 297px;
+							}
+						}
+
+						strong {
+							color: #0c75af;
+							font-weight: 600;
+						}
+
+						a {
+							display: block;
+
+							&:not(:last-child) {
+								margin-bottom: 10px;
 							}
 						}
 					}

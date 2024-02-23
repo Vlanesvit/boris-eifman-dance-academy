@@ -47,6 +47,14 @@ addLoadedClass()
 ymaps.ready(init);
 function init() {
 	if (document.getElementById('map')) {
+		// Данные каждого маркера
+		const branchData = [
+			{
+				address: 'Введенская улица, 3',
+				location: [59.956935, 30.299734],
+			},
+		]
+
 		let map = new ymaps.Map("map", {
 			controls: [],
 			// Координаты центра карты
@@ -86,8 +94,8 @@ function init() {
 		map.geoObjects.add(pinsCollection);
 
 		// Скрываем хинт при открытии балуна.
-		myMap.events.add('balloonopen', function (e) {
-			myMap.hint.close();
+		map.events.add('balloonopen', function (e) {
+			Map.hint.close();
 		});
 
 		// Закрываем балун по клику по карте
