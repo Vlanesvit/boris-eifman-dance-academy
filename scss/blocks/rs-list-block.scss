@@ -248,7 +248,7 @@
 
 		&__text {
 			transform: scale(0);
-			padding: 10px 15px;
+			padding: 15px 30px;
 			border: 1px solid rgb(255, 255, 255);
 			border-radius: 45px;
 			transition: transform 0.3s ease-in-out;
@@ -269,5 +269,11 @@
 		&.cursor__active .cursor__text {
 			transform: scale(1);
 		}
+	}
+
+	&.rs-awards .cursor__text,
+	&.rs-magazine .cursor__text {
+		background-color: #0c75af;
+		border-color: #0c75af;
 	}
 }
