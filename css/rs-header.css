@@ -19,26 +19,23 @@ header {
   transition-property: transform, -webkit-transform;
 }
 .rs-header._header-transparent {
-  padding: 30px 0px;
   color: #fff;
   margin-bottom: -100%;
 }
+.rs-header._header-transparent .rs-header__main {
+  padding: 30px 0px;
+  background-color: transparent;
+  border-bottom: none;
+}
 @media (max-width: 1699.98px) {
-  .rs-header._header-transparent {
+  .rs-header._header-transparent .rs-header__main {
     padding: 20px 0px;
   }
 }
 @media (max-width: 991.98px) {
-  .rs-header._header-transparent {
+  .rs-header._header-transparent .rs-header__main {
     padding: 10px 0px;
   }
-}
-.rs-header._header-transparent .rs-header__main {
-  background-color: transparent;
-}
-.rs-header._header-transparent .rs-header__main::after {
-  display: none;
-  border-bottom: none;
 }
 .rs-header._header-scroll {
   color: rgb(0, 0, 0);
