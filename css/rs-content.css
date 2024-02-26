@@ -1,3 +1,6 @@
+.rs-content {
+  overflow: unset;
+}
 .rs-content.rs-admin {
   border: none;
 }

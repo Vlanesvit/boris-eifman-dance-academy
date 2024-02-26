@@ -18,3 +18,4 @@
 16. [Фома ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/form.html)
 17. [Модальная Форма ОС](https://vlanesvit.github.io/boris-eifman-dance-academy/contact.html#form)
 18. [404](https://vlanesvit.github.io/boris-eifman-dance-academy/404.html)
+18. [Шаблон](https://vlanesvit.github.io/boris-eifman-dance-academy/template.html)

@@ -5,37 +5,22 @@ header {
 }
 
 .rs-header {
-  padding: 25px 0px;
   z-index: 999;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   color: rgb(0, 0, 0);
-  background-color: #fff;
-  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 0.3s ease 0s;
   transition: 0.3s ease 0s;
-  -webkit-transition-property: background-color, -webkit-transform;
-  transition-property: background-color, -webkit-transform;
-  transition-property: transform, background-color;
-  transition-property: transform, background-color, -webkit-transform;
-}
-@media (max-width: 1699.98px) {
-  .rs-header {
-    padding: 20px 0px;
-  }
-}
-@media (max-width: 991.98px) {
-  .rs-header {
-    padding: 10px 0px;
-  }
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
 .rs-header._header-transparent {
   padding: 30px 0px;
-  background-color: transparent;
   color: #fff;
-  border-bottom: none;
   margin-bottom: -100%;
 }
 @media (max-width: 1699.98px) {
@@ -48,17 +33,49 @@ header {
     padding: 10px 0px;
   }
 }
+.rs-header._header-transparent .rs-header__main {
+  background-color: transparent;
+}
+.rs-header._header-transparent .rs-header__main::after {
+  display: none;
+  border-bottom: none;
+}
 .rs-header._header-scroll {
-  background-color: #fff;
   color: rgb(0, 0, 0);
 }
-.menu-open .rs-header {
+.rs-header._header-scroll .rs-header__main {
   background-color: #fff;
+}
+.menu-open .rs-header {
   color: rgb(0, 0, 0);
+}
+.menu-open .rs-header .rs-header__main {
+  background-color: #fff;
 }
 @media (max-width: 991.98px) {
   .rs-header > .rs-search {
     display: none;
+  }
+}
+.rs-header__main {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  padding: 25px 0px;
+  -webkit-transition: 0.3s ease 0s;
+  transition: 0.3s ease 0s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  border-bottom: 1px solid #dbdbdb;
+}
+@media (max-width: 1699.98px) {
+  .rs-header__main {
+    padding: 20px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-header__main {
+    padding: 10px 0px;
   }
 }
 .rs-header__wrapper {
@@ -1080,7 +1097,6 @@ header {
   width: 100%;
   z-index: 1000;
   position: relative;
-  height: 0;
   -webkit-transition: height 0.3s ease 0s;
   transition: height 0.3s ease 0s;
 }
@@ -1090,6 +1106,7 @@ header {
     top: 0;
     left: 0;
     overflow: hidden;
+    height: 0;
   }
 }
 @media (min-width: 991.98px) {

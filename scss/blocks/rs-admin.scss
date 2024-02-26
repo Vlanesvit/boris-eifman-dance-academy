@@ -728,3 +728,42 @@
 		}
 	}
 }
+
+.rs-header .rs-admin__anchors {
+	max-width: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 25px 0px;
+	box-shadow: 0 11px 22px 0 rgba(0, 64, 100, 0.1);
+	background: #fff;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 9;
+	transform: translateY(-200px);
+	transition: 0.3s ease 0s;
+	transition-property: transform;
+
+	&._show-anchors {
+		transform: translateY(-0px);
+	}
+
+	@media (max-width: 1699.98px) {
+		padding: 20px 0px;
+	}
+
+	@media (max-width: 991.98px) {
+		padding: 10px 0px;
+		display: none;
+	}
+
+	ul {
+		li {
+			flex-grow: 1;
+
+			.rs-btn {
+				width: 100%;
+			}
+		}
+	}
+}

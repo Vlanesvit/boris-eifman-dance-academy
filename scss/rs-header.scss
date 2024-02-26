@@ -5,31 +5,18 @@ header {
 }
 
 .rs-header {
-	padding: 25px 0px;
 	z-index: 999;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	color: rgb(0, 0, 0);
-	background-color: #fff;
-	border-bottom: 1px solid #dbdbdb;
 	transition: 0.3s ease 0s;
-	transition-property: transform, background-color;
-
-	@media (max-width: 1699.98px) {
-		padding: 20px 0px;
-	}
-
-	@media (max-width: 991.98px) {
-		padding: 10px 0px;
-	}
+	transition-property: transform;
 
 	&._header-transparent {
 		padding: 30px 0px;
-		background-color: transparent;
 		color: #fff;
-		border-bottom: none;
 		margin-bottom: -100%;
 
 		@media (max-width: 1699.98px) {
@@ -39,21 +26,54 @@ header {
 		@media (max-width: 991.98px) {
 			padding: 10px 0px;
 		}
+
+		.rs-header__main {
+			background-color: transparent;
+
+			&::after {
+				display: none;
+				border-bottom: none;
+			}
+		}
 	}
 
 	&._header-scroll {
-		background-color: #fff;
 		color: rgb(0, 0, 0);
+
+		.rs-header__main {
+			background-color: #fff;
+		}
 	}
 
 	.menu-open & {
-		background-color: #fff;
 		color: rgb(0, 0, 0);
+
+		.rs-header__main {
+			background-color: #fff;
+		}
 	}
 
 	& > .rs-search {
 		@media (max-width: 991.98px) {
 			display: none;
+		}
+	}
+
+	&__main {
+		position: relative;
+		z-index: 10;
+		background-color: #fff;
+		padding: 25px 0px;
+		transition: 0.3s ease 0s;
+		transition-property: background-color;
+		border-bottom: 1px solid #dbdbdb;
+
+		@media (max-width: 1699.98px) {
+			padding: 20px 0px;
+		}
+
+		@media (max-width: 991.98px) {
+			padding: 10px 0px;
 		}
 	}
 
@@ -1121,7 +1141,6 @@ header {
 	width: 100%;
 	z-index: 1000;
 	position: relative;
-	height: 0;
 	transition: height 0.3s ease 0s;
 
 	@media (min-width: 991.98px) {
@@ -1129,6 +1148,7 @@ header {
 		top: 0;
 		left: 0;
 		overflow: hidden;
+		height: 0;
 	}
 
 	@media (min-width: 991.98px) {

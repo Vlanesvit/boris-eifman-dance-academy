@@ -328,9 +328,10 @@
 					<h1>Журналы</h1>
 
 					<div class="rs-list-block__wrapper">
-						<div class="rs-list-block__list">
-							<div class="rs-list-block__item">
-								<a href="#" class="rs-list-block__link">
+						<div class="rs-list-block__list flipbook-list">
+							<div class="rs-list-block__item flipbook-item" data-book-id="book1"
+								data-book-src="books/pdf/CondoLiving.pdf">
+								<div class="rs-list-block__link">
 									<div class="rs-list-block__img">
 										<img src="./img/blocks/gallery/gallery_img-1.jpg" alt="">
 									</div>
@@ -338,11 +339,12 @@
 										<h4>Выпуск 0001</h4>
 										<p>Дата публикации: 20.02.2020</p>
 									</div>
-								</a>
+								</div>
 							</div>
 
-							<div class="rs-list-block__item">
-								<a href="#" class="rs-list-block__link">
+							<div class="rs-list-block__item flipbook-item" data-book-id="book2"
+								data-book-src="books/pdf/FoxitPdfSdk.pdf">
+								<div class="rs-list-block__link">
 									<div class="rs-list-block__img">
 										<img src="./img/blocks/gallery/gallery_img-2.jpg" alt="">
 									</div>
@@ -350,11 +352,12 @@
 										<h4>Выпуск 0002</h4>
 										<p>Дата публикации: 20.02.2020</p>
 									</div>
-								</a>
+								</div>
 							</div>
 
-							<div class="rs-list-block__item">
-								<a href="#" class="rs-list-block__link">
+							<div class="rs-list-block__item flipbook-item" data-book-id="book3"
+								data-book-src="books/pdf/TheThreeMusketeers.pdf">
+								<div class="rs-list-block__link">
 									<div class="rs-list-block__img">
 										<img src="./img/blocks/gallery/gallery_img-3.jpg" alt="">
 									</div>
@@ -362,11 +365,12 @@
 										<h4>Выпуск 0003</h4>
 										<p>Дата публикации: 20.02.2020</p>
 									</div>
-								</a>
+								</div>
 							</div>
 
-							<div class="rs-list-block__item">
-								<a href="#" class="rs-list-block__link">
+							<div class="rs-list-block__item flipbook-item" data-book-id="book4"
+								data-book-src="books/pdf/CondoLiving.pdf">
+								<div class="rs-list-block__link">
 									<div class="rs-list-block__img">
 										<img src="./img/blocks/gallery/gallery_img-4.jpg" alt="">
 									</div>
@@ -374,7 +378,20 @@
 										<h4>Выпуск 0004</h4>
 										<p>Дата публикации: 20.02.2020</p>
 									</div>
-								</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="rs-list-block__cursor cursor">
+					<div class="cursor__point-zero">
+						<div class="cursor__wrapper">
+							<div class="cursor__circle">
+								<div class="cursor__text">
+									<span>Перейти</span>
+									<img class="cursor__arrow" src="./img/icons/arrow-right.svg" alt="">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -509,6 +526,115 @@
 		</footer>
 
 	</div>
+
+	<!-- FlipBook PDF-->
+	<link rel="stylesheet" href="css/lightbox.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/html2canvas.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/pdf.min.js"></script>
+	<script src="js/3dflipbook.min.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script type="text/javascript">
+		window.jQuery(function () {
+			const $ = window.jQuery;
+			const booksItems = document.querySelectorAll('.flipbook-item');
+			let booksOptions = {};
+
+			const instance = {
+				scene: undefined,
+				options: undefined,
+				node: $('.fb3d-modal .mount-container')
+			};
+
+			const modal = $('.fb3d-modal');
+			modal.on('fb3d.modal.hide', function () {
+				instance.scene.dispose();
+			});
+			modal.on('fb3d.modal.show', function () {
+				instance.scene = instance.node.FlipBook(instance.options);
+			});
+
+
+			booksItems.forEach(book => {
+				// const bookID = book.getAttribute('data-book-id');
+				// const bookSRC = book.getAttribute('data-book-src');
+
+				booksOptions = {
+					book1: {
+						pdf: 'books/pdf/CondoLiving.pdf',
+						template: {
+							styles: [
+								'css/black-book-view.css'
+							],
+							links: [{
+								rel: 'stylesheet',
+								href: 'css/font-awesome.min.css'
+							}],
+							script: 'js/default-book-view.js',
+						},
+					},
+
+					book2: {
+						pdf: 'books/pdf/FoxitPdfSdk.pdf',
+						template: {
+							styles: [
+								'css/black-book-view.css'
+							],
+							links: [{
+								rel: 'stylesheet',
+								href: 'css/font-awesome.min.css'
+							}],
+							script: 'js/default-book-view.js',
+						},
+					},
+
+					book3: {
+						pdf: 'books/pdf/TheThreeMusketeers.pdf',
+						template: {
+							styles: [
+								'css/black-book-view.css'
+							],
+							links: [{
+								rel: 'stylesheet',
+								href: 'css/font-awesome.min.css'
+							}],
+							script: 'js/default-book-view.js',
+						},
+					},
+
+					book4: {
+						pdf: 'books/pdf/CondoLiving.pdf',
+						template: {
+							styles: [
+								'css/black-book-view.css'
+							],
+							links: [{
+								rel: 'stylesheet',
+								href: 'css/font-awesome.min.css'
+							}],
+							script: 'js/default-book-view.js',
+						},
+					},
+				}
+
+				// console.log(booksOptions[bookID]);
+			});
+
+			$('.flipbook-list').find('.flipbook-item').click(function (e) {
+				var target = $(e.target);
+				while (target[0] && !target.attr('data-book-id')) {
+					target = $(target[0].parentNode);
+				}
+				if (target[0]) {
+					instance.options = booksOptions[target.attr('data-book-id')];
+					$('.fb3d-modal').fb3dModal('show');
+				}
+			});
+		});
+	</script>
+	<!-- /FlipBook PDF-->
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>

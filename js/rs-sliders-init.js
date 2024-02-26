@@ -58,7 +58,7 @@ function initSliders() {
 					observeSlideChildren: true,
 
 					// Скорость смены слайдов
-					speed: 5000,
+					speed: 10000,
 
 					// Включение/отключение
 					// перетаскивание на ПК

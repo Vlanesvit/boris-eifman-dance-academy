@@ -215,12 +215,17 @@ Header при скролле
 ==================================== */
 function headerFixed() {
 	const header = document.querySelector('.rs-header');
+	const headerAnchors = document.querySelector('.rs-header .rs-admin__anchors');
 	const headerTag = document.querySelector('header');
 	let lastScrollTop = 0;
 
 	function headerClassAdd() {
 		header.classList.toggle('_header-scroll', window.scrollY > 0)
 		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+		if (headerAnchors) {
+			headerAnchors.classList.toggle('_show-anchors', window.scrollY > 500)
+		}
 
 		// Проверка на присутствие класса для бургер-меню. Если он есть, то шапка не скрывается
 		if (document.documentElement.classList.contains("menu-open")) {
@@ -229,7 +234,7 @@ function headerFixed() {
 		else {
 			// Скрытие шапки
 			if (scrollTop > lastScrollTop) {
-				header.style.transform = "translateY(-150px)";
+				header.style.transform = `translateY(-${header.clientHeight}px)`;
 			} else {
 				header.style.transform = "translateY(0px)";
 			}
