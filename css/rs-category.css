@@ -69,6 +69,9 @@
   position: absolute;
   color: #fff;
 }
+.rs-category__desc h4 {
+  font-weight: 400;
+}
 .rs-category .cursor {
   position: fixed;
   left: 0;

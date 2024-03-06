@@ -822,6 +822,12 @@
 .rs-content__blockquote-text p {
   margin: 0;
 }
+.rs-content__blockquote-text a[href^="mailto:"] {
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
 @media (max-width: 1439.98px) {
   .rs-content__blockquote-btn {
     margin-top: 15px;

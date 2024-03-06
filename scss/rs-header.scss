@@ -426,34 +426,41 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 20px;
+		padding: 19px;
 		border-radius: 50%;
 		background-color: rgb(12, 117, 175);
+		border: 1px solid rgb(12, 117, 175);
 		margin-left: 15px;
 		transition: background-color 0.3s ease 0s;
 
 		._header-transparent & {
 			background-color: rgba(255, 255, 255, 0.2);
+			border-color: transparent;
 		}
 
 		._header-scroll & {
-			background-color: rgb(12, 117, 175);
+			background-color: #fff;
+			border-color: rgb(12, 117, 175);
 		}
 
 		.menu-open & {
 			background-color: rgb(12, 117, 175);
+			border-color: rgb(12, 117, 175);
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: rgb(32, 72, 123);
+				border-color: rgb(32, 72, 123);
 
 				._header-transparent & {
 					background-color: #fff;
+					border-color: #fff;
 				}
 
 				._header-scroll & {
 					background-color: rgb(32, 72, 123);
+					border-color: rgb(32, 72, 123);
 				}
 
 				svg {
@@ -484,6 +491,10 @@ header {
 			path {
 				transition: stroke 0.3s ease 0s;
 				stroke: #fff;
+
+				._header-scroll & {
+					stroke: rgb(32, 72, 123);
+				}
 			}
 		}
 
@@ -601,8 +612,8 @@ header {
 		@media (max-width: 991.98px) {
 			position: absolute;
 			width: 100%;
-			max-height: calc(100vh - 101px);
-			min-height: calc(100vh - 101px);
+			max-height: calc(100vh - 62px);
+			min-height: calc(100vh - 62px);
 			top: 100%;
 			left: 0;
 			transform: translateX(-150%);
@@ -632,6 +643,8 @@ header {
 
 	// .menu__top
 	&__top {
+		position: relative;
+		z-index: 2;
 		@media (min-width: 991.98px) {
 			display: flex;
 			align-items: center;
@@ -686,6 +699,9 @@ header {
 
 	// .menu__bottom
 	&__bottom {
+		position: relative;
+		z-index: 1;
+
 		@media (min-width: 991.98px) {
 			display: flex;
 			align-items: center;

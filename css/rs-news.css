@@ -213,7 +213,8 @@
 }
 @media (max-width: 1169.98px) {
   .rs-news__img {
-    max-width: 100%;
+    max-width: 375px;
+    min-width: 375px;
     max-height: 330px;
   }
 }
@@ -499,9 +500,13 @@
 .rs-news__promo .rs-news__footer::before, .rs-news__promo .rs-news__footer::after {
   border-color: rgb(219, 219, 219);
 }
+.rs-news__promo .rs-news__footer::after {
+  max-width: 9%;
+}
 .rs-news__promo .rs-news__arrow {
   margin: 0px 21px;
   border-color: rgb(12, 117, 175);
+  background-color: transparent;
 }
 @media (max-width: 1169.98px) {
   .rs-news__promo .rs-news__arrow {

@@ -78,10 +78,9 @@
 	}
 
 	// .rs-contact__info
-
 	&__info {
 		width: 100%;
-		max-width: 350px;
+		max-width: 360px;
 
 		@media (max-width: 1439.98px){
 			  max-width: 300px;
@@ -196,7 +195,7 @@
 					td {
 						padding: 20px 19px;
 						font-weight: 400;
-						font-size: 20px;
+						font-size: 18px;
 						line-height: 160%;
 						letter-spacing: 0.03em;
 						color: #3c3c3c;

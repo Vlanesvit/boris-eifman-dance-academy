@@ -289,8 +289,8 @@ addCursorHover(".rs-category__item", ".rs-category .cursor", "cursor__active");
 addCursorMove(".rs-category__item", ".rs-category .cursor__circle")
 addCursorHover(".rs-list-block__img", ".rs-list-block .cursor", "cursor__active");
 addCursorMove(".rs-list-block__img", ".rs-list-block .cursor__circle")
-addCursorHover(".rs-admin__other .rs-admin__item", ".rs-admin .cursor", "cursor__active");
-addCursorMove(".rs-admin__other .rs-admin__item", ".rs-admin .cursor__circle")
+addCursorHover(".rs-admin__other .rs-admin__img", ".rs-admin .cursor", "cursor__active");
+addCursorMove(".rs-admin__other .rs-admin__img", ".rs-admin .cursor__circle")
 
 function openNavigationMenu() {
 	const open = document.querySelector('.rs-content__navigation_btn');

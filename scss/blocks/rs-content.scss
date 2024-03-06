@@ -1,6 +1,6 @@
 .rs-content {
 	overflow: unset;
-	
+
 	&.rs-admin {
 		border: none;
 	}
@@ -767,6 +767,14 @@
 			}
 			p {
 				margin: 0;
+			}
+			a {
+				&[href^="mailto:"] {
+					text-decoration-line: underline;
+					text-underline-offset: 2px;
+					-webkit-text-decoration-skip-ink: none;
+					text-decoration-skip-ink: none;
+				}
 			}
 		}
 		&-btn {

@@ -656,8 +656,8 @@
   }
 }
 @media (any-hover: hover) {
-  .rs-admin__other .rs-admin__item:hover .rs-list-block__img::after {
-    opacity: 1;
+  .rs-admin__other .rs-admin__item:hover .rs-admin__desc h4 {
+    color: #0c75af;
   }
 }
 .rs-admin__other .rs-admin__img {
@@ -680,6 +680,9 @@
 }
 .rs-awards .rs-admin__other .rs-admin__img img {
   max-height: 340px;
+}
+.rs-admin__other .rs-admin__desc {
+  border: none;
 }
 .rs-admin__other .rs-admin__desc p {
   font-weight: 400;

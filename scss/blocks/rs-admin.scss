@@ -595,10 +595,8 @@
 
 			@media (any-hover: hover) {
 				&:hover {
-					.rs-list-block__img {
-						&::after {
-							opacity: 1;
-						}
+					.rs-admin__desc h4 {
+						color: #0c75af;
 					}
 				}
 			}
@@ -629,6 +627,7 @@
 
 		// .rs-list-block__desc
 		.rs-admin__desc {
+			border: none;
 			p {
 				font-weight: 400;
 				font-size: 20px;

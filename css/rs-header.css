@@ -412,31 +412,38 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  padding: 19px;
   border-radius: 50%;
   background-color: rgb(12, 117, 175);
+  border: 1px solid rgb(12, 117, 175);
   margin-left: 15px;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
 }
 ._header-transparent .rs-header__search-link {
   background-color: rgba(255, 255, 255, 0.2);
+  border-color: transparent;
 }
 ._header-scroll .rs-header__search-link {
-  background-color: rgb(12, 117, 175);
+  background-color: #fff;
+  border-color: rgb(12, 117, 175);
 }
 .menu-open .rs-header__search-link {
   background-color: rgb(12, 117, 175);
+  border-color: rgb(12, 117, 175);
 }
 @media (any-hover: hover) {
   .rs-header__search-link:hover {
     background-color: rgb(32, 72, 123);
+    border-color: rgb(32, 72, 123);
   }
   ._header-transparent .rs-header__search-link:hover {
     background-color: #fff;
+    border-color: #fff;
   }
   ._header-scroll .rs-header__search-link:hover {
     background-color: rgb(32, 72, 123);
+    border-color: rgb(32, 72, 123);
   }
   .rs-header__search-link:hover svg path {
     stroke: #fff;
@@ -462,6 +469,9 @@ header {
   -webkit-transition: stroke 0.3s ease 0s;
   transition: stroke 0.3s ease 0s;
   stroke: #fff;
+}
+._header-scroll .rs-header__search-link svg path {
+  stroke: rgb(32, 72, 123);
 }
 @media (max-width: 1699.98px) {
   .rs-header__search-link {
@@ -582,8 +592,8 @@ header {
   .menu__block {
     position: absolute;
     width: 100%;
-    max-height: calc(100vh - 101px);
-    min-height: calc(100vh - 101px);
+    max-height: calc(100vh - 62px);
+    min-height: calc(100vh - 62px);
     top: 100%;
     left: 0;
     -webkit-transform: translateX(-150%);
@@ -622,6 +632,10 @@ header {
     max-width: 728px;
     width: 100%;
   }
+}
+.menu__top {
+  position: relative;
+  z-index: 2;
 }
 @media (min-width: 991.98px) {
   .menu__top {
@@ -674,6 +688,10 @@ header {
     font-size: 16px;
     font-weight: 400;
   }
+}
+.menu__bottom {
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 991.98px) {
   .menu__bottom {

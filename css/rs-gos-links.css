@@ -69,7 +69,7 @@
 }
 @media (any-hover: hover) {
   .rs-gos-links__col ul li a:hover {
-    color: #0c75af;
+    color: #0C75AF;
     text-decoration-line: underline;
     text-underline-offset: 2px;
     -webkit-text-decoration-skip-ink: none;
