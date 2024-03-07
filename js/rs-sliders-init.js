@@ -25,15 +25,16 @@ function initSliders() {
 
 		// Инициализация слайдера
 		const enableSwiper = function () {
-			const sliderNews = document.querySelectorAll('.rs-news');
+			const sliderBlocks = document.querySelectorAll('.rs-news');
 
-			sliderNews.forEach(sliderFeature => {
-				const slider = sliderFeature.querySelector('.rs-news__slider');
-				// const arrowNext = sliderFeature.querySelector('.rs-news__button-next');
-				// const arrowPrev = sliderFeature.querySelector('.rs-news__button-prev');
+			sliderBlocks.forEach(sliderBlock => {
+				const sliderMain = sliderBlock.querySelector('.rs-news__list .rs-news__slider');
+				const sliderPromo = sliderBlock.querySelector('.rs-news__promo .rs-news__slider');
+				// const arrowNext = sliderBlock.querySelector('.rs-news__button-next');
+				// const arrowPrev = sliderBlock.querySelector('.rs-news__button-prev');
 
 				// Перечень слайдеров
-				const sliderSwiper = new Swiper(slider, {
+				const sliderMainSwiper = new Swiper(sliderMain, {
 					// Автопрокрутка
 					autoplay: {
 						// Пауза между прокруткой
@@ -84,13 +85,72 @@ function initSliders() {
 						},
 					},
 				});
+				const sliderPromoSwiper = new Swiper(sliderPromo, {
+					// Автопрокрутка
+					autoplay: {
+						// Пауза между прокруткой
+						delay: 1,
+						// delay: 5000,
+						// Закончить на последнем слайде
+						stopOnLastSlide: false,
+						// Отключить после ручного переключения
+						disableOnInteraction: false,
+						// Изменить направление
+						// reverseDirection: true,
+						// Не ждать анимацию
+						waitForTransition: false,
+					},
+
+					// Обновить свайпер
+					// при изменении элементов слайдера
+					observer: true,
+					// при изменении родительских элементов слайдера
+					observeParents: true,
+					// при изменении дочерних элементов слайдера
+					observeSlideChildren: true,
+
+					// Скорость смены слайдов
+					speed: 10000,
+
+					// Включение/отключение
+					// перетаскивание на ПК
+					simulateTouch: true,
+					allowTouchMove: true,
+					// Чувствительность свайпа
+					touchRadio: 1,
+					// Угол срабатывания свайпа/перетаскивания
+					touchAngle: 45,
+
+					// Цикличность слайдера
+					loop: true,
+					loopAdditionalSlides: 4,
+
+					// Вертикальный слайдер
+					direction: 'vertical',
+
+					// Брекпоинты (адаптив)
+					breakpoints: {
+						1169.98: {
+							slidesPerView: 2,
+							spaceBetween: 0,
+						},
+					},
+				});
 
 				// Остановка слайдера при наведении на него
-				slider.addEventListener('mouseenter', function (e) {
-					sliderSwiper.autoplay.stop();
+				sliderMain.addEventListener('mouseenter', function (e) {
+					sliderMainSwiper.autoplay.stop();
 				})
-				slider.addEventListener('mouseleave', function (e) {
-					sliderSwiper.autoplay.start();
+				sliderMain.addEventListener('mouseleave', function (e) {
+					sliderMainSwiper.autoplay.start();
+				})
+
+				// Остановка слайдера при наведении на него
+				sliderPromo.addEventListener('mouseenter', function (e) {
+					sliderPromoSwiper.autoplay.stop();
+				})
+				sliderPromo.addEventListener('mouseleave', function (e) {
+					sliderPromoSwiper.autoplay.start();
 				})
 			});
 		};
