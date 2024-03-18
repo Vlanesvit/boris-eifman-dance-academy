@@ -1,6 +1,7 @@
 .rs-error-block {
 	z-index: 10;
 	min-height: 1327px;
+	border-bottom: 1px solid #dbdbdb;
 
 	&::before {
 		content: "";
