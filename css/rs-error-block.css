@@ -1,7 +1,6 @@
 .rs-error-block {
   z-index: 10;
-  height: 100vh;
-  max-height: 1327px;
+  min-height: 1327px;
 }
 .rs-error-block::before {
   content: "";
@@ -49,6 +48,8 @@
 }
 .rs-error-block__description .rs-btn {
   margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 @media (max-width: 1439.98px) {
   .rs-error-block__description .rs-btn {

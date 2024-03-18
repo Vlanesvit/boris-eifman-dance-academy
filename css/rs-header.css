@@ -42,6 +42,7 @@ header {
 }
 .rs-header._header-scroll .rs-header__main {
   background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
 }
 .menu-open .rs-header {
   color: rgb(0, 0, 0);
@@ -294,6 +295,8 @@ header {
   background-color: rgb(12, 117, 175);
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+  position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1699.98px) {
   .rs-header__bvi-link {
@@ -312,6 +315,32 @@ header {
     margin-left: 0px;
   }
 }
+.rs-header__bvi-link::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: inherit;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: rgb(32, 72, 123);
+}
+._header-transparent .rs-header__bvi-link::before {
+  background-color: #fff;
+}
+._header-scroll .rs-header__bvi-link::before {
+  background-color: rgb(32, 72, 123);
+}
 ._header-transparent .rs-header__bvi-link {
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -322,14 +351,10 @@ header {
   background-color: rgb(12, 117, 175);
 }
 @media (any-hover: hover) {
-  .rs-header__bvi-link:hover {
-    background-color: rgb(32, 72, 123);
-  }
-  ._header-transparent .rs-header__bvi-link:hover {
-    background-color: #fff;
-  }
-  ._header-scroll .rs-header__bvi-link:hover {
-    background-color: rgb(32, 72, 123);
+  .rs-header__bvi-link:hover::before {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
   .rs-header__bvi-link:hover svg path {
     fill: #fff;
@@ -419,6 +444,8 @@ header {
   margin-left: 15px;
   -webkit-transition: background-color 0.3s ease 0s;
   transition: background-color 0.3s ease 0s;
+  position: relative;
+  overflow: hidden;
 }
 ._header-transparent .rs-header__search-link {
   background-color: rgba(255, 255, 255, 0.2);
@@ -432,18 +459,40 @@ header {
   background-color: rgb(12, 117, 175);
   border-color: rgb(12, 117, 175);
 }
+.rs-header__search-link::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  right: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: inherit;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s, -webkit-transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: rgb(32, 72, 123);
+  border-color: rgb(32, 72, 123);
+}
+._header-transparent .rs-header__search-link::before {
+  background-color: #fff;
+  border-color: #fff;
+}
+._header-scroll .rs-header__search-link::before {
+  background-color: rgb(32, 72, 123);
+  border-color: rgb(32, 72, 123);
+}
 @media (any-hover: hover) {
-  .rs-header__search-link:hover {
-    background-color: rgb(32, 72, 123);
-    border-color: rgb(32, 72, 123);
-  }
-  ._header-transparent .rs-header__search-link:hover {
-    background-color: #fff;
-    border-color: #fff;
-  }
-  ._header-scroll .rs-header__search-link:hover {
-    background-color: rgb(32, 72, 123);
-    border-color: rgb(32, 72, 123);
+  .rs-header__search-link:hover::before {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
   }
   .rs-header__search-link:hover svg path {
     stroke: #fff;

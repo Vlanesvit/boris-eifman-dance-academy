@@ -47,8 +47,8 @@
   border: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scrollbar-color: #0c75af #fff;
-  scrollbar-width: thin;
+  /* Non-Standard, But More Styling-Capable Properties */
+  /* Standardized Properties */
 }
 *::-webkit-scrollbar {
   cursor: pointer;
@@ -63,26 +63,38 @@
   transition: 0.2s ease-in-out;
   border-radius: 3px;
 }
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: #0c75af #fff;
+    scrollbar-width: thin;
+  }
+}
 *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scrollbar-color: #0c75af #0c75af;
-  scrollbar-width: thin;
+  /* Non-Standard, But More Styling-Capable Properties */
+  /* Standardized Properties */
 }
 *::before::-webkit-scrollbar, *::after::-webkit-scrollbar {
   cursor: pointer;
   width: 6px;
-  background: #fff;
+  background: transparent;
   border-radius: 3px;
 }
 *::before::-webkit-scrollbar-thumb, *::after::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: transparent;
+  background: #0c75af;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
-  border-radius: 0px;
+  border-radius: 3px;
+}
+@supports not selector(::-webkit-scrollbar) {
+  *::before, *::after {
+    scrollbar-color: #0c75af #fff;
+    scrollbar-width: thin;
+  }
 }
 
 html {
@@ -1584,6 +1596,8 @@ body::after {
   overflow-x: hidden;
   max-height: 164px;
   padding-right: 12px;
+  /* Non-Standard, But More Styling-Capable Properties */
+  /* Standardized Properties */
 }
 .select__scroll::-webkit-scrollbar {
   cursor: pointer;
@@ -1597,6 +1611,12 @@ body::after {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   border-radius: 1px;
+}
+@supports not selector(::-webkit-scrollbar) {
+  .select__scroll {
+    scrollbar-color: #0c75af #dbdbdb;
+    scrollbar-width: thin;
+  }
 }
 .select__option {
   width: 100%;

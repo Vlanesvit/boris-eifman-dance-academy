@@ -38,6 +38,7 @@ header {
 
 		.rs-header__main {
 			background-color: #fff;
+			border-bottom: 1px solid #dbdbdb;
 		}
 	}
 
@@ -302,6 +303,8 @@ header {
 		margin-left: 28px;
 		background-color: rgb(12, 117, 175);
 		transition: background-color 0.3s ease 0s;
+		position: relative;
+		overflow: hidden;
 
 		@media (max-width: 1699.98px) {
 			margin-left: 15px;
@@ -315,6 +318,31 @@ header {
 		@media (max-width: 991.98px) {
 			padding: 8px;
 			margin-left: 0px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -5px;
+			bottom: -5px;
+			right: -5px;
+			left: -5px;
+			width: calc(100% + 10px);
+			height: calc(100% + 10px);
+			border-radius: inherit;
+			z-index: -1;
+			transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+			transform: translateX(100%);
+
+			background-color: rgb(32, 72, 123);
+
+			._header-transparent & {
+				background-color: #fff;
+			}
+
+			._header-scroll & {
+				background-color: rgb(32, 72, 123);
+			}
 		}
 
 		._header-transparent & {
@@ -331,14 +359,8 @@ header {
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: rgb(32, 72, 123);
-
-				._header-transparent & {
-					background-color: #fff;
-				}
-
-				._header-scroll & {
-					background-color: rgb(32, 72, 123);
+				&::before {
+					transform: translateX(0);
 				}
 
 				svg {
@@ -432,6 +454,8 @@ header {
 		border: 1px solid rgb(12, 117, 175);
 		margin-left: 15px;
 		transition: background-color 0.3s ease 0s;
+		position: relative;
+		overflow: hidden;
 
 		._header-transparent & {
 			background-color: rgba(255, 255, 255, 0.2);
@@ -448,19 +472,37 @@ header {
 			border-color: rgb(12, 117, 175);
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
+		&::before {
+			content: "";
+			position: absolute;
+			top: -5px;
+			bottom: -5px;
+			right: -5px;
+			left: -5px;
+			width: calc(100% + 10px);
+			height: calc(100% + 10px);
+			border-radius: inherit;
+			z-index: -1;
+			transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0s;
+			transform: translateX(100%);
+			background-color: rgb(32, 72, 123);
+			border-color: rgb(32, 72, 123);
+
+			._header-transparent & {
+				background-color: #fff;
+				border-color: #fff;
+			}
+
+			._header-scroll & {
 				background-color: rgb(32, 72, 123);
 				border-color: rgb(32, 72, 123);
+			}
+		}
 
-				._header-transparent & {
-					background-color: #fff;
-					border-color: #fff;
-				}
-
-				._header-scroll & {
-					background-color: rgb(32, 72, 123);
-					border-color: rgb(32, 72, 123);
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					transform: translateX(0);
 				}
 
 				svg {

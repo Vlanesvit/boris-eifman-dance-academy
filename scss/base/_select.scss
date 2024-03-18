@@ -102,6 +102,7 @@
 		max-height: 164px;
 		padding-right: 12px;
 
+		/* Non-Standard, But More Styling-Capable Properties */
 		&::-webkit-scrollbar {
 			cursor: pointer;
 			width: 2px;
@@ -114,6 +115,12 @@
 			background: #0c75af;
 			transition: 0.2s ease-in-out;
 			border-radius: 1px;
+		}
+
+		/* Standardized Properties */
+		@supports not selector(::-webkit-scrollbar) {
+			scrollbar-color: #0c75af #dbdbdb;
+			scrollbar-width: thin;
 		}
 
 		// Стили скроллбара
