@@ -297,6 +297,7 @@ header {
   transition: background-color 0.3s ease 0s;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 @media (max-width: 1699.98px) {
   .rs-header__bvi-link {
@@ -446,6 +447,7 @@ header {
   transition: background-color 0.3s ease 0s;
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 ._header-transparent .rs-header__search-link {
   background-color: rgba(255, 255, 255, 0.2);
@@ -485,7 +487,7 @@ header {
   border-color: #fff;
 }
 ._header-scroll .rs-header__search-link::before {
-  background-color: rgb(32, 72, 123);
+  background-color: #0c75af;
   border-color: rgb(32, 72, 123);
 }
 @media (any-hover: hover) {
